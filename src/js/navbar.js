@@ -22,6 +22,7 @@
     { href: base + 'index.html', text: 'Home', id: 'home' },
     { href: base + 'public/pages/home-2.html', text: 'Home 2', id: 'home-2' },
     { href: base + 'public/pages/services.html', text: 'Services', id: 'services' },
+    { href: base + 'public/pages/booking.html', text: 'Booking', id: 'booking' },
     { href: base + 'public/pages/about.html', text: 'About', id: 'about' },
     { href: base + 'public/pages/blog.html', text: 'Blog', id: 'blog' },
     { href: base + 'public/pages/contact.html', text: 'Contact', id: 'contact' }

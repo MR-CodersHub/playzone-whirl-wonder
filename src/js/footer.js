@@ -38,10 +38,11 @@
     '<div class="foot__col">' +
     '<h6 class="foot__col-title">Play &amp; Visit</h6>' +
     '<ul class="foot__col-links">' +
+    '<li><a href="' + base + 'public/pages/booking.html">Book Play Slot</a></li>' +
     '<li><a href="' + base + 'index.html">Home</a></li>' +
     '<li><a href="' + base + 'public/pages/home-2.html">Home 2</a></li>' +
-    '<li><a href="' + base + 'public/pages/services.html">Camps & Classes</a></li>' +
-    '<li><a href="' + base + 'public/pages/pricing.html">Passes & Memberships</a></li>' +
+    '<li><a href="' + base + 'public/pages/services.html">Camps &amp; Classes</a></li>' +
+    '<li><a href="' + base + 'public/pages/pricing.html">Passes &amp; Memberships</a></li>' +
     '</ul>' +
     '</div>' +
 

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Session · Whirl & Wonder Play Studio</title>
+  <meta name="description" content="Reserve open play sessions, birthday party packages, and sensory workshops at Whirl & Wonder Brooklyn."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css?v=9"/>
+  <link rel="stylesheet" href="../../src/css/pages.css?v=9"/>
+</head>
+<body class="booking-page">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <header class="section__head">
+        <span class="eyebrow" style="color:var(--rose);">Reservations &amp; Passes</span>
+        <h1 class="section__title">
+          Book Your <span class="text-marigold">Play Session</span> &amp; <span class="text-rose">Parties.</span>
+        </h1>
+        <p class="section__lede">
+          Choose an experience, select your preferred date &amp; slot, and reserve in seconds. 2 adults included free with every child admission.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-section">
+    <div class="container">
+      <form id="bookingForm" class="booking-layout" onsubmit="event.preventDefault(); return false;">
+        
+        <!-- Left: Steps -->
+        <div class="booking-steps">
+
+          <!-- STEP 1: EXPERIENCE TYPE -->
+          <div class="booking-step">
+            <div class="step-head">
+              <div class="step-num">1</div>
+              <div>
+                <h3 class="step-title">Select Experience</h3>
+                <p class="step-subtitle">Choose the type of play visit for your family</p>
+              </div>
+            </div>
+
+            <div class="exp-grid" id="expGrid">
+              <div class="exp-card is-selected" data-type="open-play" data-price="14">
+                <span class="exp-card__badge">Most Popular</span>
+                <div class="exp-card__icon">🧸</div>
+                <h4 class="exp-card__name">Open Play Pass</h4>
+                <p class="exp-card__desc">2-hour unrestricted pass to age-graded zones. Free for babies under 12 mos.</p>
+                <div class="exp-card__price">$14 <span>/ child</span></div>
+              </div>
+
+              <div class="exp-card" data-type="sensory-stem" data-price="25">
+                <span class="exp-card__badge">Guided</span>
+                <div class="exp-card__icon">🎨</div>
+                <h4 class="exp-card__name">Sensory &amp; STEM Lab</h4>
+                <p class="exp-card__desc">Guided 90-minute workshop with developmental specialists + open play access.</p>
+                <div class="exp-card__price">$25 <span>/ child</span></div>
+              </div>
+
+              <div class="exp-card" data-type="birthday-party" data-price="385">
+                <span class="exp-card__badge">Private</span>
+                <div class="exp-card__icon">🎂</div>
+                <h4 class="exp-card__name">Birthday Party</h4>
+                <p class="exp-card__desc">Private studio hire, dedicated host, tableware, cake moment &amp; clean-up.</p>
+                <div class="exp-card__price">$385 <span>/ 10 kids</span></div>
+              </div>
+
+              <div class="exp-card" data-type="pass-holder" data-price="0">
+                <span class="exp-card__badge">Members</span>
+                <div class="exp-card__icon">🎟️</div>
+                <h4 class="exp-card__name">Pass Redemption</h4>
+                <p class="exp-card__desc">Redeem an active 3-visit pass, 10-visit bundle, or monthly family membership.</p>
+                <div class="exp-card__price">$0 <span>with pass</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: DATE & TIME SLOT -->
+          <div class="booking-step">
+            <div class="step-head">
+              <div class="step-num">2</div>
+              <div>
+                <h3 class="step-title">Choose Date &amp; Time Slot</h3>
+                <p class="step-subtitle">All slots feature regulated capacity for optimal safety and supervision</p>
+              </div>
+            </div>
+
+            <div class="date-time-row">
+              <div class="date-input-wrap">
+                <label for="bookDate" style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.5rem;color:var(--ink);">Visit Date</label>
+                <input type="date" id="bookDate" required />
+              </div>
+
+              <div>
+                <label style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.5rem;color:var(--ink);">Available Time Slots</label>
+                <div class="slots-grid" id="slotsGrid">
+                  <div class="slot-chip is-selected" data-time="9:00 AM – 11:00 AM">
+                    <span class="slot-chip__time">9:00 AM</span>
+                    <span class="slot-chip__spots">8 spots left</span>
+                  </div>
+                  <div class="slot-chip" data-time="11:30 AM – 1:30 PM">
+                    <span class="slot-chip__time">11:30 AM</span>
+                    <span class="slot-chip__spots">4 spots left</span>
+                  </div>
+                  <div class="slot-chip" data-time="2:00 PM – 4:00 PM">
+                    <span class="slot-chip__time">2:00 PM</span>
+                    <span class="slot-chip__spots">12 spots left</span>
+                  </div>
+                  <div class="slot-chip" data-time="4:30 PM – 6:30 PM">
+                    <span class="slot-chip__time">4:30 PM</span>
+                    <span class="slot-chip__spots">6 spots left</span>
+                  </div>
+                  <div class="slot-chip" data-time="6:30 PM – 7:30 PM">
+                    <span class="slot-chip__time">6:30 PM</span>
+                    <span class="slot-chip__spots">Wind-down</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: CHILDREN & ADULTS COUNTER -->
+          <div class="booking-step">
+            <div class="step-head">
+              <div class="step-num">3</div>
+              <div>
+                <h3 class="step-title">Guests &amp; Age Zones</h3>
+                <p class="step-subtitle">Tell us how many little explorers are joining</p>
+              </div>
+            </div>
+
+            <div class="counters-grid">
+              <div class="counter-box">
+                <div class="counter-info">
+                  <h4>Children (1–12 yrs)</h4>
+                  <span id="childPricingLabel">$14.00 each</span>
+                </div>
+                <div class="counter-ctrl">
+                  <button type="button" class="counter-btn" id="btnKidsMinus">−</button>
+                  <span class="counter-val" id="valKids">1</span>
+                  <button type="button" class="counter-btn" id="btnKidsPlus">+</button>
+                </div>
+              </div>
+
+              <div class="counter-box">
+                <div class="counter-info">
+                  <h4>Infants (under 12 mos)</h4>
+                  <span>Free admission</span>
+                </div>
+                <div class="counter-ctrl">
+                  <button type="button" class="counter-btn" id="btnInfantsMinus">−</button>
+                  <span class="counter-val" id="valInfants">0</span>
+                  <button type="button" class="counter-btn" id="btnInfantsPlus">+</button>
+                </div>
+              </div>
+
+              <div class="counter-box">
+                <div class="counter-info">
+                  <h4>Accompanying Adults</h4>
+                  <span>2 Free per child</span>
+                </div>
+                <div class="counter-ctrl">
+                  <button type="button" class="counter-btn" id="btnAdultsMinus">−</button>
+                  <span class="counter-val" id="valAdults">1</span>
+                  <button type="button" class="counter-btn" id="btnAdultsPlus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: ADD-ONS & SENSORY REQUESTS -->
+          <div class="booking-step">
+            <div class="step-head">
+              <div class="step-num">4</div>
+              <div>
+                <h3 class="step-title">Optional Add-ons</h3>
+                <p class="step-subtitle">Snacks, grip socks, and sensory accommodations</p>
+              </div>
+            </div>
+
+            <div class="addons-list">
+              <label class="addon-row" id="rowAddonSocks">
+                <div class="addon-left">
+                  <input type="checkbox" id="chkSocks" data-name="Studio Grip Socks (Pair)" data-price="3.5"/>
+                  <div class="addon-text">
+                    <h5>Whirl &amp; Wonder Grip Socks</h5>
+                    <p>High-traction silicone grip socks required for padded fort climbers (or bring your own clean pair).</p>
+                  </div>
+                </div>
+                <div class="addon-price">+$3.50</div>
+              </label>
+
+              <label class="addon-row" id="rowAddonSnack">
+                <div class="addon-left">
+                  <input type="checkbox" id="chkSnack" data-name="Organic Snack & Juice Pack" data-price="6.0"/>
+                  <div class="addon-text">
+                    <h5>Organic Snack &amp; Fruit Box</h5>
+                    <p>Nut-free apple slices, organic cheddar crisps, and 100% cold-pressed juice box.</p>
+                  </div>
+                </div>
+                <div class="addon-price">+$6.00</div>
+              </label>
+
+              <label class="addon-row" id="rowAddonKit">
+                <div class="addon-left">
+                  <input type="checkbox" id="chkKit" data-name="Take-Home Sensory Dough Kit" data-price="8.5"/>
+                  <div class="addon-text">
+                    <h5>Take-Home Sensory Dough Kit</h5>
+                    <p>Botanical lavender sensory dough with wooden stamps and cutter tools.</p>
+                  </div>
+                </div>
+                <div class="addon-price">+$8.50</div>
+              </label>
+            </div>
+
+            <div style="margin-top:1.5rem;">
+              <label for="sensoryNotes" style="display:block;font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:var(--ink);">Allergy, Accessibility or Sensory Notes (Optional)</label>
+              <textarea id="sensoryNotes" rows="2" placeholder="e.g., Peanut allergy, low-sensory lighting preference, wheelchair access..." style="width:100%;padding:0.85rem 1.2rem;border:1px solid var(--line-soft);border-radius:16px;font-family:var(--sans);font-size:0.9rem;"></textarea>
+            </div>
+          </div>
+
+          <!-- STEP 5: PARENT & CONTACT DETAILS -->
+          <div class="booking-step">
+            <div class="step-head">
+              <div class="step-num">5</div>
+              <div>
+                <h3 class="step-title">Parent &amp; Guardian Contact</h3>
+                <p class="step-subtitle">Where we should send your confirmation and check-in barcode</p>
+              </div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+              <div class="field">
+                <label for="pName">Parent/Guardian Name *</label>
+                <input type="text" id="pName" required placeholder="Alex Rivera"/>
+              </div>
+              <div class="field">
+                <label for="pEmail">Email Address *</label>
+                <input type="email" id="pEmail" required placeholder="alex@example.com"/>
+              </div>
+              <div class="field">
+                <label for="pPhone">Phone Number *</label>
+                <input type="tel" id="pPhone" required placeholder="(718) 555-0199"/>
+              </div>
+              <div class="field">
+                <label for="pEmergency">Emergency Contact / Notes</label>
+                <input type="text" id="pEmergency" placeholder="Grandparent / Sitter name (optional)"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Sticky Order Summary -->
+        <aside class="booking-sidebar">
+          <div class="summary-card">
+            <h3 class="summary-title">Reservation Summary</h3>
+
+            <div class="summary-items">
+              <div class="summary-item">
+                <span>Experience</span>
+                <strong id="sumExpName">Open Play Pass</strong>
+              </div>
+              <div class="summary-item">
+                <span>Date &amp; Slot</span>
+                <strong id="sumDateSlot">Today · 9:00 AM</strong>
+              </div>
+              <div class="summary-item">
+                <span>Children</span>
+                <strong id="sumKidsCount">1 Child ($14.00)</strong>
+              </div>
+              <div class="summary-item highlight">
+                <span>Adult Admission</span>
+                <span>FREE (Included)</span>
+              </div>
+              <div class="summary-item" id="sumAddonsRow" style="display:none;">
+                <span>Add-ons</span>
+                <strong id="sumAddonsTotal">$0.00</strong>
+              </div>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+              <span>Total Due</span>
+              <strong id="sumTotalAmount">$14.00</strong>
+            </div>
+
+            <button type="button" class="btn--brand-pill" id="btnConfirmBooking" style="width:100%;justify-content:center;font-size:1.05rem;padding:1rem;">
+              Confirm &amp; Hold Slot
+            </button>
+
+            <div class="summary-guarantee">
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 6l-4.5 4.5L5 8.5l1-1 1 1 3.5-3.5 1 1z"/></svg>
+              <span>Free cancellation up to 4 hrs before slot</span>
+            </div>
+          </div>
+        </aside>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- BOOKING CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-icon">✓</div>
+      <h3 class="modal-title">Spot Confirmed!</h3>
+      <p style="color:var(--ink-soft);font-size:0.95rem;margin-bottom:1rem;">
+        Your reservation has been booked. A confirmation email and digital pass have been sent to your inbox.
+      </p>
+
+      <div class="modal-qr">
+        <div style="background:#fff;padding:0.75rem;border-radius:12px;display:inline-block;border:1px dashed var(--marigold);">
+          <svg viewBox="0 0 100 100" width="120" height="120">
+            <rect width="100" height="100" fill="#ffffff"/>
+            <!-- Simulating clean QR Code -->
+            <rect x="10" y="10" width="25" height="25" fill="#1b2230"/>
+            <rect x="15" y="15" width="15" height="15" fill="#ffffff"/>
+            <rect x="18" y="18" width="9" height="9" fill="#1b2230"/>
+            <rect x="65" y="10" width="25" height="25" fill="#1b2230"/>
+            <rect x="70" y="15" width="15" height="15" fill="#ffffff"/>
+            <rect x="73" y="18" width="9" height="9" fill="#1b2230"/>
+            <rect x="10" y="65" width="25" height="25" fill="#1b2230"/>
+            <rect x="15" y="70" width="15" height="15" fill="#ffffff"/>
+            <rect x="18" y="73" width="9" height="9" fill="#1b2230"/>
+            <rect x="42" y="15" width="6" height="25" fill="#1b2230"/>
+            <rect x="42" y="50" width="16" height="6" fill="#1b2230"/>
+            <rect x="65" y="50" width="8" height="20" fill="#1b2230"/>
+            <rect x="45" y="65" width="10" height="18" fill="#1b2230"/>
+            <rect x="62" y="75" width="22" height="10" fill="#1b2230"/>
+          </svg>
+        </div>
+        <div style="font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--ink);margin-top:0.6rem;" id="modalBookingId">
+          WW-89241
+        </div>
+        <div style="font-size:0.82rem;color:var(--ink-mute);" id="modalDetailsText">
+          Open Play · Today @ 9:00 AM
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;justify-content:center;margin-top:1.5rem;">
+        <button type="button" class="btn--brand-pill" onclick="window.print();" style="padding:0.75rem 1.4rem;font-size:0.9rem;">
+          Print Pass / Receipt
+        </button>
+        <a href="../../index.html" class="btn btn--line" style="border-radius:999px;padding:0.75rem 1.4rem;font-size:0.9rem;">
+          Return Home
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../src/js/navbar.js?v=9"></script>
+  <script src="../../src/js/footer.js?v=9"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // State
+      var selectedExp = { type: 'open-play', name: 'Open Play Pass', price: 14 };
+      var selectedTime = '9:00 AM – 11:00 AM';
+      var kidsCount = 1;
+      var infantsCount = 0;
+      var adultsCount = 1;
+
+      // Set default date to today
+      var dateInput = document.getElementById('bookDate');
+      if (dateInput) {
+        var today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
+        dateInput.min = today;
+      }
+
+      // Check URL query parameters (e.g. ?type=birthday or ?type=open-play)
+      var urlParams = new URLSearchParams(window.location.search);
+      var typeParam = urlParams.get('type');
+
+      // Experience Selection
+      var expCards = document.querySelectorAll('.exp-card');
+      expCards.forEach(function (card) {
+        if (typeParam && card.getAttribute('data-type') === typeParam) {
+          expCards.forEach(function (c) { c.classList.remove('is-selected'); });
+          card.classList.add('is-selected');
+          selectedExp = {
+            type: card.getAttribute('data-type'),
+            name: card.querySelector('.exp-card__name').textContent,
+            price: parseFloat(card.getAttribute('data-price'))
+          };
+        }
+
+        card.addEventListener('click', function () {
+          expCards.forEach(function (c) { c.classList.remove('is-selected'); });
+          card.classList.add('is-selected');
+          selectedExp = {
+            type: card.getAttribute('data-type'),
+            name: card.querySelector('.exp-card__name').textContent,
+            price: parseFloat(card.getAttribute('data-price'))
+          };
+          updateCalculations();
+        });
+      });
+
+      // Time Slot Selection
+      var slotChips = document.querySelectorAll('.slot-chip');
+      slotChips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          slotChips.forEach(function (s) { s.classList.remove('is-selected'); });
+          chip.classList.add('is-selected');
+          selectedTime = chip.getAttribute('data-time');
+          updateCalculations();
+        });
+      });
+
+      // Counters
+      var valKids = document.getElementById('valKids');
+      var valInfants = document.getElementById('valInfants');
+      var valAdults = document.getElementById('valAdults');
+
+      document.getElementById('btnKidsPlus').addEventListener('click', function () {
+        kidsCount++;
+        valKids.textContent = kidsCount;
+        updateCalculations();
+      });
+      document.getElementById('btnKidsMinus').addEventListener('click', function () {
+        if (kidsCount > 1) {
+          kidsCount--;
+          valKids.textContent = kidsCount;
+          updateCalculations();
+        }
+      });
+
+      document.getElementById('btnInfantsPlus').addEventListener('click', function () {
+        infantsCount++;
+        valInfants.textContent = infantsCount;
+        updateCalculations();
+      });
+      document.getElementById('btnInfantsMinus').addEventListener('click', function () {
+        if (infantsCount > 0) {
+          infantsCount--;
+          valInfants.textContent = infantsCount;
+          updateCalculations();
+        }
+      });
+
+      document.getElementById('btnAdultsPlus').addEventListener('click', function () {
+        adultsCount++;
+        valAdults.textContent = adultsCount;
+      });
+      document.getElementById('btnAdultsMinus').addEventListener('click', function () {
+        if (adultsCount > 1) {
+          adultsCount--;
+          valAdults.textContent = adultsCount;
+        }
+      });
+
+      // Addons Checkboxes
+      var addonCheckboxes = [
+        document.getElementById('chkSocks'),
+        document.getElementById('chkSnack'),
+        document.getElementById('chkKit')
+      ];
+
+      addonCheckboxes.forEach(function (chk) {
+        if (!chk) return;
+        chk.addEventListener('change', function () {
+          var row = chk.closest('.addon-row');
+          if (chk.checked) row.classList.add('is-checked');
+          else row.classList.remove('is-checked');
+          updateCalculations();
+        });
+      });
+
+      if (dateInput) {
+        dateInput.addEventListener('change', updateCalculations);
+      }
+
+      function updateCalculations() {
+        // Experience name
+        document.getElementById('sumExpName').textContent = selectedExp.name;
+
+        // Date slot
+        var dVal = dateInput ? dateInput.value : 'Selected Date';
+        document.getElementById('sumDateSlot').textContent = dVal + ' · ' + selectedTime.split('–')[0].trim();
+
+        // Pricing logic
+        var expTotal = 0;
+        if (selectedExp.type === 'birthday-party') {
+          expTotal = selectedExp.price;
+          document.getElementById('sumKidsCount').textContent = 'Party Group (up to 10)';
+        } else {
+          expTotal = selectedExp.price * kidsCount;
+          document.getElementById('sumKidsCount').textContent = kidsCount + (kidsCount === 1 ? ' Child ($' : ' Children ($') + expTotal.toFixed(2) + ')';
+        }
+
+        // Addons total
+        var addonsTotal = 0;
+        addonCheckboxes.forEach(function (chk) {
+          if (chk && chk.checked) {
+            addonsTotal += parseFloat(chk.getAttribute('data-price')) * (selectedExp.type === 'birthday-party' ? 1 : kidsCount);
+          }
+        });
+
+        var sumAddonsRow = document.getElementById('sumAddonsRow');
+        if (addonsTotal > 0) {
+          sumAddonsRow.style.display = 'flex';
+          document.getElementById('sumAddonsTotal').textContent = '+$' + addonsTotal.toFixed(2);
+        } else {
+          sumAddonsRow.style.display = 'none';
+        }
+
+        var grandTotal = expTotal + addonsTotal;
+        document.getElementById('sumTotalAmount').textContent = '$' + grandTotal.toFixed(2);
+      }
+
+      // Initial calculation
+      updateCalculations();
+
+      // Modal Handling
+      var bookingModal = document.getElementById('bookingModal');
+      var btnConfirm = document.getElementById('btnConfirmBooking');
+      var modalCloseBtn = document.getElementById('modalCloseBtn');
+
+      if (btnConfirm) {
+        btnConfirm.addEventListener('click', function () {
+          var pName = document.getElementById('pName').value.trim();
+          var pEmail = document.getElementById('pEmail').value.trim();
+
+          if (!pName || !pEmail) {
+            alert('Please fill in parent name and email address to confirm your reservation.');
+            document.getElementById('pName').focus();
+            return;
+          }
+
+          // Generate random booking ID
+          var randomId = 'WW-' + Math.floor(10000 + Math.random() * 90000);
+          document.getElementById('modalBookingId').textContent = randomId;
+          document.getElementById('modalDetailsText').textContent = selectedExp.name + ' · ' + (dateInput ? dateInput.value : 'Today') + ' @ ' + selectedTime;
+
+          bookingModal.classList.add('is-active');
+        });
+      }
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', function () {
+          bookingModal.classList.remove('is-active');
+        });
+      }
+      if (bookingModal) {
+        bookingModal.addEventListener('click', function (e) {
+          if (e.target === bookingModal) {
+            bookingModal.classList.remove('is-active');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

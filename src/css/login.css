@@ -12,7 +12,6 @@
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   min-height: 100vh;
-  padding-top: 70px; /* room for fixed nav */
 }
 @media (max-width: 900px) {
   .login { grid-template-columns: 1fr; }
