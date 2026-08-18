@@ -8,49 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./src/css/style.css?v=6" />
-  <link rel="stylesheet" href="./src/css/login.css?v=6">
+  <link rel="stylesheet" href="./src/css/style.css?v=7" />
+  <link rel="stylesheet" href="./src/css/login.css?v=7">
+  <link rel="stylesheet" href="./src/css/pages.css?v=7">
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#" class="nav__brand">
-        <span class="nav__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="16" cy="16" r="5"/>
-            <line x1="16" y1="3" x2="16" y2="8"/>
-            <line x1="16" y1="24" x2="16" y2="29"/>
-            <line x1="3" y1="16" x2="8" y2="16"/>
-            <line x1="24" y1="16" x2="29" y2="16"/>
-            <line x1="6.6" y1="6.6" x2="10.2" y2="10.2"/>
-            <line x1="21.8" y1="21.8" x2="25.4" y2="25.4"/>
-            <line x1="6.6" y1="25.4" x2="10.2" y2="21.8"/>
-            <line x1="21.8" y1="10.2" x2="25.4" y2="6.6"/>
-          </svg>
-        </span>
-        <span class="nav__name">Whirl<em>&amp;Wonder</em></span>
-      </a>
-      <ul class="nav__links">
-        <li><a href="#zones">Play zones</a></li>
-        <li><a href="#parties">Parties</a></li>
-        <li><a href="#safety">Safety</a></li>
-        <li><a href="#gallery">Studio</a></li>
-        <li><a href="#voices">Families</a></li>
-      </ul>
-      <div class="nav__actions">
-        <a href="./public/auth/login.html" class="nav__login" id="loginBtn">
-          <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="6" r="3"/><path d="M2 14c1.5-3 4-4.5 6-4.5s4.5 1.5 6 4.5"/></svg>
-          <span>Parent login</span>
-        </a>
-        <a href="#reserve" class="nav__cta">
-          <span>Reserve a slot</span>
-          <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="8 3 13 8 8 13"/></svg>
-        </a>
-      </div>
-    </div>
-  </header>
 
   <!-- HERO -->
   <section class="hero" id="hero" style="min-height: 100vh;">
@@ -71,8 +33,8 @@
         <div class="hero__center-card">
 
           <h1 class="hero__title">
-            Play, Create &amp;<br />
-            <em>Wonder.</em>
+            <span style="color:#d63f3f;">Play,</span> <span style="color:#1b2230;">Create</span> &amp;<br />
+            <em style="color:#c95b12;">Wonder.</em>
           </h1>
 
           <p class="hero__lede">
@@ -98,7 +60,7 @@
     <div class="hero__strip">
       <div class="hero__strip-inner glass-light">
         <div class="strip__item">
-          <strong>4</strong><span>Play zones</span>
+          <strong>14</strong><span>Play zones</span>
         </div>
         <span class="strip__sep"></span>
         <div class="strip__item">
@@ -120,8 +82,8 @@
   <section class="zones" id="zones">
     <div class="container">
       <header class="section__head">
-        <span class="eyebrow">01 — Play zones</span>
-        <h2 class="section__title">Four rooms, <em>tuned to growing.</em></h2>
+        <span class="eyebrow" style="color:var(--grass);">01 — Play zones</span>
+        <h2 class="section__title">Four rooms, <span class="text-marigold">tuned to growing.</span></h2>
         <p class="section__lede">
           Each zone is designed for a developmental window — from the soft
           wobble of first walkers to the calculated chaos of the climber wall.
@@ -132,7 +94,7 @@
       <div class="zone-grid">
         <article class="zone zone--tots">
           <div class="zone__media">
-            <img src="https://images.unsplash.com/photo-1591084728795-1149f32d9866?auto=format&fit=crop&w=1200&q=80" alt="A bright, soft room for babies and toddlers" />
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80" alt="A bright, soft room for babies and toddlers" />
             <span class="zone__age">0 – 2 yrs</span>
           </div>
           <div class="zone__body">
@@ -208,8 +170,8 @@
   <section class="parties" id="parties">
     <div class="container">
       <header class="section__head">
-        <span class="eyebrow">02 — Party packages</span>
-        <h2 class="section__title">Birthdays that <em>do the planning</em> for you.</h2>
+        <span class="eyebrow" style="color:var(--rose);">02 — Party packages</span>
+        <h2 class="section__title">Birthdays that <span class="text-marigold">do the planning</span> <span class="text-rose">for you.</span></h2>
         <p class="section__lede">
           Private studio hire, dedicated host, themed setup, paper goods,
           cake cutting, and a tidy exit. We run the show — you show up and
@@ -291,8 +253,8 @@
   <section class="safety" id="safety">
     <div class="container safety__grid">
       <div class="safety__intro">
-        <span class="eyebrow">03 — Safety</span>
-        <h2 class="section__title">The <em>boring</em> details,<br />taken seriously.</h2>
+        <span class="eyebrow" style="color:var(--sky);">03 — Safety</span>
+        <h2 class="section__title">The <span class="text-grass">safety details,</span><br /><span class="text-marigold">taken seriously.</span></h2>
         <p class="section__lede">
           The fun only works if the trust does. Here's exactly how we keep kids
           safe, what we clean, who watches the room, and how we handle
@@ -361,8 +323,8 @@
   <section class="gallery" id="gallery">
     <div class="container">
       <header class="section__head">
-        <span class="eyebrow">04 — Studio</span>
-        <h2 class="section__title">A look <em>around the room.</em></h2>
+        <span class="eyebrow" style="color:var(--marigold);">04 — Studio</span>
+        <h2 class="section__title">A joyful look <span class="text-rose">around the</span> <span class="text-marigold">room.</span></h2>
       </header>
 
       <div class="gallery__grid">
@@ -392,8 +354,8 @@
   <section class="voices" id="voices">
     <div class="container">
       <header class="section__head">
-        <span class="eyebrow">05 — Families</span>
-        <h2 class="section__title">A few notes from <em>the lobby.</em></h2>
+        <span class="eyebrow" style="color:var(--rose);">05 — Families</span>
+        <h2 class="section__title">Loved notes from <span class="text-marigold">the lobby.</span></h2>
       </header>
 
       <div class="voices__grid">
@@ -435,8 +397,8 @@
   <section class="reserve" id="reserve">
     <div class="container reserve__inner glass">
       <div class="reserve__intro">
-        <span class="eyebrow">06 — Reserve</span>
-        <h2 class="section__title">Pick a slot. <em>Bring small socks.</em></h2>
+        <span class="eyebrow" style="color:var(--grass);">06 — Reserve</span>
+        <h2 class="section__title">Pick a slot. <span class="text-grass">Bring small socks.</span></h2>
         <p class="section__lede">
           Open play is $14 per child, free under 12 months. Members always
           have priority booking up to 14 days out.
@@ -481,7 +443,7 @@
           <textarea id="r-notes" name="notes" rows="3" placeholder="Optional. We'll be in touch if anything needs a call."></textarea>
         </div>
         <div class="field field--full field--submit">
-          <button type="submit" class="btn btn--solid btn--block">Reserve slot</button>
+          <button type="submit" class="btn btn--solid btn--block" style="background:var(--marigold);color:var(--ink);font-weight:700;">Reserve slot</button>
           <p class="form__success" id="reserveSuccess" hidden>
             <span class="dot dot--live"></span>
             Slot held for 20 minutes. Confirmation sent to your inbox.
@@ -495,8 +457,8 @@
   <section class="membership">
     <div class="container membership__inner">
       <div class="membership__copy">
-        <span class="eyebrow">07 — Membership</span>
-        <h3 class="section__title section__title--sm">A <em>home key</em> for our regulars.</h3>
+        <span class="eyebrow" style="color:var(--marigold);">07 — Membership</span>
+        <h3 class="section__title section__title--sm">A <span class="text-marigold">home key</span> for our regulars.</h3>
         <p>Unlimited open play, 15% off party add-ons, guest passes each month,
           and early booking on weekends. Pause anytime.</p>
       </div>
@@ -518,46 +480,14 @@
         </div>
       </div>
       <div class="membership__cta">
-        <a href="login.html" class="btn btn--solid" id="memberBtn">Start membership</a>
+        <a href="public/auth/login.html" class="btn--brand-pill" id="memberBtn">Start membership</a>
         <span class="membership__hint">Login required — your spot holds 14-day priority booking.</span>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="foot">
-    <div class="container foot__inner">
-      <div class="foot__brand">
-        <span class="nav__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="16" cy="16" r="5"/>
-            <line x1="16" y1="3" x2="16" y2="8"/>
-            <line x1="16" y1="24" x2="16" y2="29"/>
-            <line x1="3" y1="16" x2="8" y2="16"/>
-            <line x1="24" y1="16" x2="29" y2="16"/>
-            <line x1="6.6" y1="6.6" x2="10.2" y2="10.2"/>
-            <line x1="21.8" y1="21.8" x2="25.4" y2="25.4"/>
-            <line x1="6.6" y1="25.4" x2="10.2" y2="21.8"/>
-            <line x1="21.8" y1="10.2" x2="25.4" y2="6.6"/>
-          </svg>
-        </span>
-        <div>
-          <strong>Whirl &amp; Wonder</strong>
-          <span>412 Vanderbilt Ave · Brooklyn NY 11238</span>
-        </div>
-      </div>
-      <ul class="foot__cols">
-        <li><h6>Visit</h6><span>Tue–Sun · 9 – 7:30</span><span>Closed Mondays (deep clean)</span></li>
-        <li><h6>Reach us</h6><span>hello@whirlandwonder.co</span><span>(718) 555&#8209;0142</span></li>
-        <li><h6>Follow</h6><span>@whirlandwonder</span><span>Studio journal on Substack</span></li>
-      </ul>
-    </div>
-    <div class="foot__legal">
-      <span>© 2026 Whirl &amp; Wonder Play Studio</span>
-      <span>ASTM F1918 · NYC DOB inspected · Nut-free studio</span>
-    </div>
-  </footer>
-
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/footer.js"></script>
   <script src="./src/js/script.js"></script>
 </body>
 </html>

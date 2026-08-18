@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us · Whirl & Wonder</title>
+  <meta name="description" content="Get in touch with Whirl & Wonder — Brooklyn's premier indoor play studio. Visit us, call, or send a message."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css"/>
+  <link rel="stylesheet" href="../../src/css/pages.css"/>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="container">
+      <header class="section__head">
+        <span class="eyebrow" style="color:var(--rose);">Get in touch</span>
+        <h1 class="section__title">We'd love to <span class="text-marigold">hear</span> <span class="text-rose">from you.</span></h1>
+        <p class="section__lede">Questions about our services, want to book a tour, or just want to say hi? Reach out anytime.</p>
+      </header>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div>
+          <div class="contact-info-cards">
+            <div class="contact-card">
+              <div class="contact-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><h4>Visit us</h4><p>412 Vanderbilt Ave<br/>Brooklyn, NY 11238<br/><small style="color:var(--ink-mute);">Tue–Sun · 9 AM – 7:30 PM</small></p></div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><h4>Call us</h4><p><a href="tel:+17185550142">(718) 555-0142</a><br/><small style="color:var(--ink-mute);">Mon–Fri · 9 AM – 5 PM</small></p></div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><h4>Email us</h4><p><a href="mailto:hello@whirlandwonder.co">hello@whirlandwonder.co</a><br/><small style="color:var(--ink-mute);">We reply within 24 hours</small></p></div>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <div style="text-align:center;padding:2rem;">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:0.75rem;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p style="font-size:0.88rem;">412 Vanderbilt Ave, Brooklyn, NY 11238</p>
+              <p style="font-size:0.82rem;color:var(--ink-mute);">Near the Dean St. entrance to Prospect Park</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form">
+          <h3 class="section__title section__title--sm" style="text-align:left;margin-bottom:0.5rem;">Send us a message</h3>
+          <p style="font-size:0.9rem;color:var(--ink-soft);margin-bottom:1.5rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
+          <form id="contactForm" novalidate>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem 1rem;">
+              <div class="field">
+                <label for="c-name">Your Name *</label>
+                <input type="text" id="c-name" name="name" required placeholder="Jane Doe"/>
+              </div>
+              <div class="field">
+                <label for="c-email">Email Address *</label>
+                <input type="email" id="c-email" name="email" required placeholder="jane@example.com"/>
+              </div>
+              <div class="field">
+                <label for="c-phone">Phone Number</label>
+                <input type="tel" id="c-phone" name="phone" placeholder="(555) 000-0000"/>
+              </div>
+              <div class="field">
+                <label for="c-subject">Subject</label>
+                <select id="c-subject" name="subject">
+                  <option>General inquiry</option>
+                  <option>Book a tour</option>
+                  <option>Membership question</option>
+                  <option>Birthday party</option>
+                  <option>Feedback</option>
+                </select>
+              </div>
+              <div class="field" style="grid-column:1/-1;">
+                <label for="c-message">Message *</label>
+                <textarea id="c-message" name="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
+              </div>
+              <div class="field" style="grid-column:1/-1;">
+                <button type="submit" class="btn--brand-pill" style="width:100%;justify-content:center;">Send message</button>
+                <div id="contactSuccess" style="display:none;margin-top:1rem;"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section page-section--alt">
+    <div class="container" style="text-align:center;">
+      <span class="eyebrow" style="color:var(--grass);">Newsletter</span>
+      <h2 class="section__title">Stay in the <em style="color:var(--marigold);">loop.</em></h2>
+      <p class="section__lede" style="margin-bottom:1.5rem;">Monthly play tips, safety updates, and studio news — straight to your inbox.</p>
+      <form id="newsletterForm" style="display:flex;gap:0.5rem;max-width:420px;margin:0 auto;">
+        <input type="email" name="email" placeholder="Your email" required style="flex:1;padding:0.75rem 1rem;border:1px solid var(--line-soft);border-radius:999px;font-size:0.9rem;background:#fff;"/>
+        <button type="submit" class="btn--brand-pill">Subscribe</button>
+      </form>
+      <p id="newsletterMsg" style="display:none;margin-top:0.75rem;font-size:0.88rem;color:var(--grass);">Thanks for subscribing!</p>
+    </div>
+  </section>
+
+  <script src="../../src/js/form-validation.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script>
+  (function(){
+    var contactForm = document.getElementById('contactForm');
+    var contactSuccess = document.getElementById('contactSuccess');
+    if(contactForm){
+      FormValidation.attachRealTimeValidation(contactForm);
+      contactForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(!FormValidation.validateForm(contactForm)) return;
+        var btn = contactForm.querySelector('button[type="submit"]');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        setTimeout(function(){
+          contactForm.reset();
+          btn.textContent = 'Send message';
+          btn.disabled = false;
+          FormValidation.showSuccessMessage(contactSuccess, 'Message sent! We\'ll get back to you within 24 hours.');
+        }, 800);
+      });
+    }
+
+    var nlForm = document.getElementById('newsletterForm');
+    var nlMsg = document.getElementById('newsletterMsg');
+    if(nlForm){
+      nlForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        var input = nlForm.querySelector('input');
+        if(!input.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)){
+          input.style.borderColor = '#e87a7a';
+          return;
+        }
+        input.style.borderColor = '';
+        nlForm.style.display = 'none';
+        nlMsg.style.display = 'block';
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

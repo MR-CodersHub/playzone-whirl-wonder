@@ -1,0 +1,176 @@
+/* =====================================================
+   Whirl & Wonder — Shared Navbar Component
+   Loaded on every page via <script src="navbar.js">
+   ===================================================== */
+
+(function () {
+  'use strict';
+
+  function getBasePath() {
+    var path = window.location.pathname.replace(/\\/g, '/');
+    if (path.includes('/public/auth/admin/') || path.includes('/auth/admin/')) return '../../../';
+    if (path.includes('/public/auth/user/') || path.includes('/auth/user/')) return '../../../';
+    if (path.includes('/public/auth/') || path.includes('/auth/')) return '../../';
+    if (path.includes('/public/pages/') || path.includes('/pages/')) return '../../';
+    return './';
+  }
+
+  var base = getBasePath();
+  var isIndex = base === './';
+
+  var links = [
+    { href: base + 'index.html', text: 'Home', id: 'home' },
+    { href: base + 'public/pages/home-2.html', text: 'Home 2', id: 'home-2' },
+    { href: base + 'public/pages/services.html', text: 'Services', id: 'services' },
+    { href: base + 'public/pages/about.html', text: 'About', id: 'about' },
+    { href: base + 'public/pages/blog.html', text: 'Blog', id: 'blog' },
+    { href: base + 'public/pages/contact.html', text: 'Contact', id: 'contact' }
+  ];
+
+  var currentPath = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+
+  var logoSvg = '<svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="5"/><line x1="16" y1="3" x2="16" y2="8"/><line x1="16" y1="24" x2="16" y2="29"/><line x1="3" y1="16" x2="8" y2="16"/><line x1="24" y1="16" x2="29" y2="16"/><line x1="6.6" y1="6.6" x2="10.2" y2="10.2"/><line x1="21.8" y1="21.8" x2="25.4" y2="25.4"/><line x1="6.6" y1="25.4" x2="10.2" y2="21.8"/><line x1="21.8" y1="10.2" x2="25.4" y2="6.6"/></svg>';
+
+  var navLinksHtml = links.map(function (l) {
+    var isActive = false;
+    if (l.id === 'home' && (currentPath.endsWith('/index.html') || currentPath.endsWith('/') || !currentPath.includes('.html'))) {
+      isActive = true;
+    } else if (l.id !== 'home' && currentPath.includes(l.id)) {
+      isActive = true;
+    }
+    return '<li><a href="' + l.href + '"' + (isActive ? ' class="is-active" aria-current="page"' : '') + '>' + l.text + '</a></li>';
+  }).join('');
+
+  var navHtml = '<header class="nav" id="nav"><div class="nav__inner">' +
+    '<a href="' + base + 'index.html' + '" class="nav__brand">' +
+    '<img src="' + base + 'assets/logo.png" alt="Whirl &amp; Wonder Logo" class="nav__logo-img" width="34" height="34" />' +
+    '<span class="nav__name">Whirl<em>&amp;Wonder</em></span>' +
+    '</a>' +
+    '<ul class="nav__links">' + navLinksHtml + '</ul>' +
+    '<div class="nav__actions">' +
+    '<div class="nav__profile-wrap">' +
+    '<button class="nav__profile-btn" id="profileToggle" aria-label="Profile menu" aria-expanded="false">' +
+    '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
+    '</button>' +
+    '<div class="nav__dropdown" id="profileDropdown">' +
+    '<a href="' + base + 'public/auth/login.html" class="nav__dropdown-item">' +
+    '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>' +
+    'Login / Signup</a>' +
+    '<a href="' + base + 'public/auth/admin/admin-dashboard.html" class="nav__dropdown-item">' +
+    '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>' +
+    'Admin Dashboard</a>' +
+    '<a href="' + base + 'public/auth/user/user-dashboard.html" class="nav__dropdown-item">' +
+    '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
+    'User Dashboard</a>' +
+    '</div></div>' +
+    '<button class="nav__theme-toggle" id="themeToggle" aria-label="Toggle dark mode">' +
+    '<svg class="nav__sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>' +
+    '<svg class="nav__moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>' +
+    '</button>' +
+    '<button class="nav__rtl-toggle" id="rtlToggle" aria-label="Toggle RTL direction">' +
+    '<span class="nav__rtl-label">RTL</span>' +
+    '</button>' +
+    '</div></div></header>';
+
+  // Clean up any pre-existing static header to avoid duplicates
+  var existingNav = document.getElementById('nav') || document.querySelector('header.nav');
+  if (existingNav) {
+    existingNav.remove();
+  }
+
+  document.body.insertAdjacentHTML('afterbegin', navHtml);
+
+  var nav = document.getElementById('nav');
+  var profileBtn = document.getElementById('profileToggle');
+  var dropdown = document.getElementById('profileDropdown');
+  var themeToggle = document.getElementById('themeToggle');
+  var rtlToggle = document.getElementById('rtlToggle');
+
+  // Scroll state
+  function updateNav() {
+    if (!nav) return;
+    if (window.scrollY > 40) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
+  // Profile dropdown
+  if (profileBtn && dropdown) {
+    profileBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var expanded = profileBtn.getAttribute('aria-expanded') === 'true';
+      profileBtn.setAttribute('aria-expanded', String(!expanded));
+      dropdown.classList.toggle('is-open');
+    });
+    document.addEventListener('click', function () {
+      profileBtn.setAttribute('aria-expanded', 'false');
+      dropdown.classList.remove('is-open');
+    });
+    dropdown.addEventListener('click', function (e) { e.stopPropagation(); });
+  }
+
+  // Dark mode
+  function applyTheme(dark) {
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
+  }
+
+  var savedTheme = localStorage.getItem('ww-theme');
+  if (savedTheme === 'dark') {
+    applyTheme(true);
+  } else if (savedTheme === 'light') {
+    applyTheme(false);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme(true);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var isDark = document.documentElement.classList.contains('dark');
+      applyTheme(!isDark);
+      localStorage.setItem('ww-theme', !isDark ? 'dark' : 'light');
+    });
+  }
+
+  // RTL toggle
+  var savedRtl = localStorage.getItem('ww-rtl') === 'true';
+  if (savedRtl) {
+    document.documentElement.setAttribute('dir', 'rtl');
+    document.documentElement.classList.add('rtl');
+  }
+
+  if (rtlToggle) {
+    rtlToggle.addEventListener('click', function () {
+      var isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+      if (isRtl) {
+        document.documentElement.removeAttribute('dir');
+        document.documentElement.classList.remove('rtl');
+        localStorage.setItem('ww-rtl', 'false');
+      } else {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.classList.add('rtl');
+        localStorage.setItem('ww-rtl', 'true');
+      }
+    });
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var href = link.getAttribute('href');
+      if (!href || href === '#' || href.length < 2) return;
+      var target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      var offset = (nav ? nav.offsetHeight : 0) + 12;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+})();

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Details · Whirl & Wonder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css"/>
+  <link rel="stylesheet" href="../../src/css/pages.css"/>
+</head>
+<body>
+
+  <section class="page-hero" id="serviceHero">
+    <div class="container">
+      <header class="section__head" id="serviceHeader">
+        <span class="eyebrow" id="serviceEyebrow">Service</span>
+        <h1 class="section__title" id="serviceTitle">Loading...</h1>
+        <p class="section__lede" id="serviceExcerpt"></p>
+      </header>
+    </div>
+  </section>
+
+  <!-- Detail Content -->
+  <section class="page-section" id="serviceContent" style="display:none;">
+    <div class="container">
+      <div class="service-detail__hero">
+        <img id="serviceImg" src="" alt="" class="service-detail__img"/>
+        <div>
+          <h2 class="section__title section__title--sm" id="serviceHeading"></h2>
+          <div id="serviceDescription" style="font-size:1rem;color:var(--ink-soft);line-height:1.7;margin-bottom:1.5rem;"></div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div style="margin-top:3rem;">
+        <h3 class="section__title section__title--sm" style="text-align:left;margin-bottom:1.5rem;">What's included</h3>
+        <ul class="feature-list" id="serviceFeatures"></ul>
+      </div>
+
+      <!-- Pricing -->
+      <div style="margin-top:3rem;">
+        <h3 class="section__title section__title--sm" style="text-align:left;margin-bottom:1.5rem;">Pricing</h3>
+        <div class="pricing-grid" id="servicePricing"></div>
+      </div>
+
+      <!-- FAQs -->
+      <div style="margin-top:3rem;">
+        <h3 class="section__title section__title--sm" style="text-align:left;margin-bottom:1.5rem;">Frequently asked questions</h3>
+        <div class="faq-grid" id="serviceFaqs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not Found -->
+  <section class="page-section" id="serviceNotFound" style="display:none;">
+    <div class="container" style="text-align:center;padding:4rem 1rem;">
+      <h2 class="section__title">Service not found</h2>
+      <p style="color:var(--ink-soft);margin-bottom:2rem;">We couldn't find the service you're looking for.</p>
+      <a href="services.html" class="btn btn--solid">Browse all services</a>
+    </div>
+  </section>
+
+  <script src="../../src/js/services-data.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script>
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    var service = null;
+    if(typeof SERVICES_DATA !== 'undefined'){
+      service = SERVICES_DATA.find(function(s){ return s.id === id; });
+    }
+
+    if(!service){
+      document.getElementById('serviceHero').style.display = 'none';
+      document.getElementById('serviceNotFound').style.display = 'block';
+      return;
+    }
+
+    document.title = service.title + ' · Whirl & Wonder';
+    document.getElementById('serviceEyebrow').textContent = 'Service detail';
+    document.getElementById('serviceTitle').innerHTML = service.title;
+    document.getElementById('serviceExcerpt').textContent = service.short;
+    document.getElementById('serviceContent').style.display = 'block';
+    document.getElementById('serviceImg').src = service.image;
+    document.getElementById('serviceImg').alt = service.title;
+    document.getElementById('serviceHeading').innerHTML = service.title;
+    document.getElementById('serviceDescription').innerHTML = '<p>' + service.description + '</p>';
+
+    var checkIcon = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+    document.getElementById('serviceFeatures').innerHTML = service.features.map(function(f){
+      return '<li>' + checkIcon + '<span>' + f + '</span></li>';
+    }).join('');
+
+    document.getElementById('servicePricing').innerHTML = service.pricing.map(function(p){
+      return '<div class="pricing-card ' + (p.featured ? 'pricing-card--featured' : '') + '">' +
+        (p.featured ? '<span class="pricing-card__badge">Best value</span>' : '') +
+        '<div class="pricing-card__name">' + p.tier + '</div>' +
+        '<div class="pricing-card__price">' + p.price + ' <em>' + p.per + '</em></div>' +
+        '<p class="pricing-card__desc">' + p.note + '</p>' +
+        '<a href="contact.html" class="btn btn--solid btn--block">Get started</a></div>';
+    }).join('');
+
+    document.getElementById('serviceFaqs').innerHTML = service.faqs.map(function(faq,i){
+      return '<div class="faq-item" id="sfq-' + i + '">' +
+        '<button class="faq-item__question" onclick="var el=document.getElementById(\'sfq-' + i + '\');el.classList.toggle(\'is-open\');">' +
+        '<span>' + faq.q + '</span>' +
+        '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg></button>' +
+        '<div class="faq-item__answer"><div class="faq-item__answer-inner">' + faq.a + '</div></div></div>';
+    }).join('');
+  })();
+  </script>
+</body>
+</html>

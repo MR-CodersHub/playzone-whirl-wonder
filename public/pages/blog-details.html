@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Article · Whirl & Wonder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css"/>
+  <link rel="stylesheet" href="../../src/css/pages.css"/>
+</head>
+<body>
+
+  <section class="page-hero" style="padding-bottom:2rem;">
+    <div class="container" style="max-width:800px;">
+      <span class="eyebrow" id="blogCat"></span>
+      <h1 class="section__title" id="blogTitle" style="text-align:left;">Loading...</h1>
+      <div class="blog-detail__meta" id="blogMeta"></div>
+    </div>
+  </section>
+
+  <section class="page-section" style="padding-top:2rem;">
+    <div class="container">
+      <div class="blog-layout">
+        <div>
+          <img id="blogHeroImg" src="" alt="" class="blog-detail__hero-img"/>
+          <div class="blog-content" id="blogContent"></div>
+          <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--line);" id="blogTags"></div>
+          <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);text-align:center;">
+            <a href="blog.html" class="btn btn--line">&larr; Back to all articles</a>
+          </div>
+        </div>
+        <aside class="blog-sidebar" id="blogSidebar"></aside>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../src/js/blog-data.js"></script>
+  <script src="../../src/js/blog.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script>
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    var post = null;
+    if(typeof BLOG_DATA !== 'undefined'){
+      post = BLOG_DATA.find(function(p){ return p.id === id; });
+    }
+
+    if(!post){
+      document.querySelector('.page-hero').innerHTML = '<div class="container" style="text-align:center;padding:4rem 1rem;"><h1 class="section__title">Article not found</h1><p style="color:var(--ink-soft);margin-bottom:2rem;">We couldn\'t find the article you\'re looking for.</p><a href="blog.html" class="btn btn--solid">Browse all articles</a></div>';
+      return;
+    }
+
+    document.title = post.title + ' · Whirl & Wonder';
+
+    function formatDate(d){
+      var dt = new Date(d);
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return months[dt.getMonth()] + ' ' + dt.getDate() + ', ' + dt.getFullYear();
+    }
+
+    document.getElementById('blogCat').textContent = post.category;
+    document.getElementById('blogTitle').innerHTML = post.title;
+    document.getElementById('blogMeta').innerHTML =
+      '<span>' + formatDate(post.date) + '</span>' +
+      '<span class="blog-card__sep">·</span>' +
+      '<span>' + post.readTime + '</span>' +
+      '<span class="blog-card__sep">·</span>' +
+      '<span>By ' + post.author + '</span>';
+    document.getElementById('blogHeroImg').src = post.image;
+    document.getElementById('blogHeroImg').alt = post.title;
+    document.getElementById('blogContent').innerHTML = post.content;
+    document.getElementById('blogTags').innerHTML = '<div class="blog-card__tags">' + post.tags.map(function(t){ return '<span class="blog-card__tag">' + t + '</span>'; }).join('') + '</div>';
+
+    // Sidebar
+    var sidebar = document.getElementById('blogSidebar');
+    var otherPosts = BLOG_DATA.filter(function(p){ return p.id !== post.id; }).slice(0,4);
+    sidebar.innerHTML =
+      '<div class="sidebar-block"><h4>More articles</h4>' +
+      otherPosts.map(function(p){
+        return '<a href="blog-details.html?id=' + p.id + '" class="sidebar-recent__item">' +
+          '<img src="' + p.image + '" alt="" loading="lazy"/>' +
+          '<div><h4>' + p.title + '</h4><span>' + formatDate(p.date) + '</span></div></a>';
+      }).join('') + '</div>' +
+      '<div class="sidebar-block" style="background:var(--marigold-soft);border-color:var(--marigold-soft);">' +
+      '<h4 style="border:none;padding:0;">Enjoyed this article?</h4>' +
+      '<p style="font-size:0.85rem;color:var(--ink-soft);margin-top:0.5rem;">Share it with a fellow parent who might find it useful.</p>' +
+      '</div>';
+  })();
+  </script>
+</body>
+</html>

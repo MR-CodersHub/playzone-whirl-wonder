@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon · Whirl & Wonder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css"/>
+  <link rel="stylesheet" href="../../src/css/pages.css"/>
+</head>
+<body>
+  <main class="coming-soon">
+    <div class="coming-soon__inner">
+      <div class="coming-soon__icon">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h1 class="coming-soon__title">Something exciting is on the way!</h1>
+      <p class="coming-soon__desc">We're putting the finishing touches on a brand-new experience. Be the first to know when we launch.</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown__unit"><span class="countdown__num" id="cd-days">30</span><span class="countdown__label">Days</span></div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-hours">12</span><span class="countdown__label">Hours</span></div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-mins">45</span><span class="countdown__label">Minutes</span></div>
+        <div class="countdown__unit"><span class="countdown__num" id="cd-secs">20</span><span class="countdown__label">Seconds</span></div>
+      </div>
+      <form class="coming-soon__form" id="comingSoonForm" novalidate>
+        <input type="email" name="email" placeholder="Enter your email" required/>
+        <button type="submit" class="btn btn--solid" style="background:var(--marigold);color:var(--ink);">Notify me</button>
+      </form>
+      <p id="comingSoonMsg" style="margin-top:1rem;font-size:0.88rem;color:var(--grass);display:none;">Thanks! We'll be in touch.</p>
+    </div>
+  </main>
+  <script>
+  (function(){
+    var target = new Date();
+    target.setDate(target.getDate() + 30);
+    function tick(){
+      var now = new Date();
+      var diff = target - now;
+      if(diff < 0) diff = 0;
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = d;
+      document.getElementById('cd-hours').textContent = h;
+      document.getElementById('cd-mins').textContent = m;
+      document.getElementById('cd-secs').textContent = s;
+      if(diff > 0) requestAnimationFrame(function(){ setTimeout(tick, 1000); });
+    }
+    tick();
+    var form = document.getElementById('comingSoonForm');
+    if(form){
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        var input = form.querySelector('input');
+        if(!input.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)){
+          input.style.borderColor = '#e87a7a';
+          return;
+        }
+        input.style.borderColor = '';
+        form.style.display = 'none';
+        document.getElementById('comingSoonMsg').style.display = 'block';
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

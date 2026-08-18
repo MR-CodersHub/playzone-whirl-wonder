@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services · Whirl & Wonder</title>
+  <meta name="description" content="Explore our play zones, birthday parties, memberships, sensory programs, holiday camps, and private venue hire."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css"/>
+  <link rel="stylesheet" href="../../src/css/pages.css"/>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="container">
+      <header class="section__head">
+        <span class="eyebrow" style="color:var(--grass);">What we offer</span>
+        <h1 class="section__title">Play, learn &amp; create with <span class="text-marigold">our</span> <span class="text-rose">programs.</span></h1>
+        <p class="section__lede">From casual drop-ins to full birthday productions — here's everything we do at Whirl &amp; Wonder.</p>
+      </header>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <section class="page-section page-section--alt">
+    <div class="container" style="text-align:center;">
+      <span class="eyebrow" style="color:var(--rose);">Not sure?</span>
+      <h2 class="section__title">Let us help you <em style="color:var(--marigold);">choose.</em></h2>
+      <p class="section__lede" style="margin-bottom:2rem;">Every family is different. Tell us about your kids and we'll recommend the perfect fit.</p>
+      <a href="contact.html" class="btn--brand-pill">Get in touch</a>
+    </div>
+  </section>
+
+  <script src="../../src/js/services-data.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script>
+  (function(){
+    var grid = document.getElementById('servicesGrid');
+    if(!grid || typeof SERVICES_DATA === 'undefined') return;
+    grid.innerHTML = SERVICES_DATA.map(function(s){
+      return '<a href="service-details.html?id=' + s.id + '" class="service-card">' +
+        '<div class="service-card__media">' +
+        '<img src="' + s.image + '" alt="' + s.title + '" loading="lazy"/>' +
+        '<div class="service-card__icon">' + s.icon + '</div>' +
+        '</div>' +
+        '<div class="service-card__body">' +
+        '<h3 class="service-card__title">' + s.title + '</h3>' +
+        '<p class="service-card__desc">' + s.short + '</p>' +
+        '<span class="service-card__link">Learn more <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="8 3 13 8 8 13"/></svg></span>' +
+        '</div></a>';
+    }).join('');
+  })();
+  </script>
+</body>
+</html>

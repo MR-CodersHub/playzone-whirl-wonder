@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog · Whirl & Wonder</title>
+  <meta name="description" content="Articles on play, parenting, safety, and Brooklyn family life from Whirl & Wonder studio."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../src/css/style.css"/>
+  <link rel="stylesheet" href="../../src/css/pages.css"/>
+</head>
+<body>
+
+  <section class="page-hero">
+    <div class="container">
+      <header class="section__head">
+        <span class="eyebrow" style="color:var(--sky);">Studio Journal</span>
+        <h1 class="section__title">Stories, guides &amp; <span class="text-marigold">play</span> <span class="text-rose">updates.</span></h1>
+        <p class="section__lede">Thoughts on play, parenting, sensory science, and everything happening at Whirl &amp; Wonder.</p>
+      </header>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="blog-layout">
+        <div>
+          <!-- Search -->
+          <div class="blog-search">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="blogSearch" placeholder="Search articles..."/>
+          </div>
+
+          <!-- Filters -->
+          <div class="blog-filters">
+            <button class="blog-filter-btn blog-filter-btn--active" data-category="All">All</button>
+            <button class="blog-filter-btn" data-category="Play & Development">Play & Development</button>
+            <button class="blog-filter-btn" data-category="Parenting Tips">Parenting Tips</button>
+            <button class="blog-filter-btn" data-category="Party Planning">Party Planning</button>
+            <button class="blog-filter-btn" data-category="Studio Life">Studio Life</button>
+          </div>
+
+          <p style="font-size:0.85rem;color:var(--ink-mute);margin-bottom:1.5rem;" id="blogResultCount">6 articles</p>
+
+          <!-- Grid -->
+          <div class="blog-grid" id="blogGrid"></div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+          <div class="sidebar-block">
+            <h4>Categories</h4>
+            <div id="sidebarCategories"></div>
+          </div>
+          <div class="sidebar-block">
+            <h4>Recent articles</h4>
+            <div id="sidebarRecent"></div>
+          </div>
+          <div class="sidebar-block" style="background:var(--marigold-soft);border-color:var(--marigold-soft);">
+            <h4 style="border:none;padding:0;margin-bottom:0.5rem;">Subscribe to our journal</h4>
+            <p style="font-size:0.85rem;color:var(--ink-soft);margin-bottom:1rem;">Get play tips, safety updates, and studio news delivered monthly.</p>
+            <input type="email" placeholder="Your email" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:6px;font-size:0.85rem;background:#fff;margin-bottom:0.5rem;"/>
+            <button class="btn btn--solid btn--block" style="font-size:0.82rem;padding:0.65rem;">Subscribe</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../src/js/blog-data.js"></script>
+  <script src="../../src/js/blog.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
+  <script>
+  (function(){
+    if(typeof BLOG_DATA !== 'undefined' && typeof BlogManager !== 'undefined'){
+      BlogManager.init(BLOG_DATA);
+    }
+  })();
+  </script>
+</body>
+</html>

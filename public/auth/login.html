@@ -10,40 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../src/css/style.css?v=6" />
   <link rel="stylesheet" href="../../src/css/login.css?v=6" />
+  <link rel="stylesheet" href="../../src/css/pages.css" />
 </head>
 <body class="login-page">
 
-  <!-- Header (simplified — no overlay) -->
-  <header class="nav is-scrolled">
-    <div class="nav__inner">
-      <a href="../../index.html" class="nav__brand">
-        <span class="nav__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="16" cy="16" r="5"/>
-            <line x1="16" y1="3" x2="16" y2="8"/>
-            <line x1="16" y1="24" x2="16" y2="29"/>
-            <line x1="3" y1="16" x2="8" y2="16"/>
-            <line x1="24" y1="16" x2="29" y2="16"/>
-            <line x1="6.6" y1="6.6" x2="10.2" y2="10.2"/>
-            <line x1="21.8" y1="21.8" x2="25.4" y2="25.4"/>
-            <line x1="6.6" y1="25.4" x2="10.2" y2="21.8"/>
-            <line x1="21.8" y1="10.2" x2="25.4" y2="6.6"/>
-          </svg>
-        </span>
-        <span class="nav__name">Whirl<em>&amp;Wonder</em></span>
-      </a>
-      <div class="nav__actions">
-        <a href="../../index.html" class="nav__login">
-          <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="8" x2="13" y2="8"/><polyline points="11 5 14 8 11 11"/></svg>
-          <span>Back to studio</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Login split layout -->
   <main class="login">
-    <!-- Left: brand panel -->
     <aside class="login__brand">
       <div class="login__brand-bg">
         <img
@@ -71,7 +42,6 @@
       </div>
     </aside>
 
-    <!-- Right: form panel -->
     <section class="login__panel">
       <div class="login__panel-inner">
         <a href="../../index.html" class="login__back">
@@ -110,7 +80,7 @@
         </form>
 
         <div class="login__alt">
-          New to the studio? <a href="#" class="login__link">Create a family account</a>
+          New to the studio? <a href="signup.html" class="login__link">Create a family account</a>
         </div>
 
         <div class="login__demo">
@@ -123,5 +93,7 @@
   </main>
 
   <script src="../../src/js/login.js"></script>
+  <script src="../../src/js/navbar.js"></script>
+  <script src="../../src/js/footer.js"></script>
 </body>
 </html>
