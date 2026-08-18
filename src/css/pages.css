@@ -108,109 +108,401 @@
 }
 
 /* =====================================================
-   DARK MODE
+   DARK MODE COMPREHENSIVE HIGH-CONTRAST SYSTEM
    ===================================================== */
 
 .dark {
-  --bg: #141b29;
-  --bg-2: #1a2235;
-  --ink: #f0ebe0;
-  --ink-soft: #b0a899;
-  --ink-mute: #706a5d;
-  --line: #2a3347;
-  --line-soft: #222a3a;
-  --glass-bg: rgba(20, 27, 41, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-light: rgba(26, 34, 53, 0.92);
+  --bg: #0f141e;
+  --bg-2: #172030;
+  --ink: #fbf8f2;
+  --ink-soft: #c8c2b5;
+  --ink-mute: #8e877a;
+  --line: #2d3a52;
+  --line-soft: #202b3d;
+  --marigold: #f5af3d;
+  --rose: #f08c8c;
+  --grass: #9bd17b;
+  --sky: #83cad9;
+  --marigold-soft: rgba(245, 175, 61, 0.18);
+  --rose-soft: rgba(240, 140, 140, 0.18);
+  --grass-soft: rgba(155, 209, 123, 0.18);
+  --sky-soft: rgba(131, 202, 217, 0.18);
+  --glass-bg: rgba(23, 32, 48, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-light: rgba(27, 38, 58, 0.94);
 }
 
+.dark body {
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+/* Typography & Headings */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+.dark .section__title, .dark .page-title, .dark .hero__title {
+  color: var(--ink);
+}
+.dark p, .dark .section__lede, .dark .hero__lede, .dark .page-lede {
+  color: var(--ink-soft);
+}
+.dark strong, .dark b {
+  color: var(--ink);
+}
+
+/* Nav & Header */
 .dark .nav {
-  background: rgba(20, 27, 41, 0.88);
+  background: rgba(15, 20, 30, 0.92);
   border-bottom-color: var(--line-soft);
 }
 .dark .nav.is-scrolled {
-  background: rgba(20, 27, 41, 0.96);
+  background: rgba(15, 20, 30, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.dark .nav__name {
+  color: #ffffff;
+}
+.dark .nav__links a {
+  color: var(--ink-soft);
+}
+.dark .nav__links a:hover,
+.dark .nav__links a.is-active {
+  color: #ffffff;
 }
 .dark .nav__profile-btn,
 .dark .nav__theme-toggle,
 .dark .nav__rtl-toggle {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--line);
+  color: var(--ink);
 }
 .dark .nav__dropdown {
   background: var(--bg-2);
   border-color: var(--line);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+.dark .nav__dropdown-item {
+  color: var(--ink);
 }
 .dark .nav__dropdown-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--marigold);
 }
 
+/* Global Section Backgrounds */
+.dark .page-hero,
+.dark .page-section,
+.dark .play-hero,
+.dark .play-philosophy,
+.dark .play-pillars,
+.dark .booking-section,
+.dark .about-section,
+.dark .contact-section {
+  background-color: var(--bg);
+}
+.dark .page-section--alt {
+  background-color: var(--bg-2);
+}
+
+/* Hero Strip */
+.dark .hero__strip-inner {
+  background: rgba(23, 32, 48, 0.92);
+  border-color: var(--line);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+.dark .strip__item strong {
+  color: var(--ink);
+}
+.dark .strip__item span {
+  color: var(--ink-soft);
+}
+.dark .strip__sep {
+  background: var(--line);
+}
+
+/* Core Cards across Index & Pages */
 .dark .zone,
 .dark .party,
 .dark .voice,
-.dark .safety__card {
-  background: var(--bg-2);
-  border-color: var(--line);
+.dark .safety__card,
+.dark .tier,
+.dark .blog-card,
+.dark .service-card,
+.dark .pricing-card,
+.dark .contact-card,
+.dark .faq-item,
+.dark .testimonial-card,
+.dark .value-card,
+.dark .team-card,
+.dark .stat-card,
+.dark .pillar-card,
+.dark .parent-guide-card {
+  background: var(--bg-2) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
-.dark .reserve__form input,
-.dark .reserve__form select,
-.dark .reserve__form textarea {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--line);
+.dark .zone__title,
+.dark .party__title,
+.dark .safety__card h4,
+.dark .tier__name,
+.dark .pricing-card__name,
+.dark .service-card h3,
+.dark .blog-card h3,
+.dark .faq-item__question,
+.dark .pillar-card h3,
+.dark .value-card h3,
+.dark .team-card h4 {
   color: var(--ink);
 }
 
-.dark .hero__strip-inner {
-  background: rgba(20, 27, 41, 0.9);
-  border-color: rgba(255, 255, 255, 0.06);
+.dark .zone__body p,
+.dark .party__body p,
+.dark .safety__card p,
+.dark .tier__note,
+.dark .pricing-card__desc,
+.dark .service-card p,
+.dark .blog-card p,
+.dark .faq-item__answer,
+.dark .pillar-card p,
+.dark .value-card p,
+.dark .team-card p {
+  color: var(--ink-soft);
 }
 
-.dark .membership {
-  background: #0d1117;
+.dark .zone__meta {
+  border-top-color: var(--line);
+}
+.dark .zone__stat strong {
+  color: var(--ink);
+}
+.dark .zone__stat span {
+  color: var(--ink-mute);
 }
 
-.dark .foot {
-  background: #0a0f18;
+.dark .voice blockquote {
+  color: var(--ink);
+}
+.dark .voice cite strong {
+  color: var(--ink);
+}
+.dark .voice cite span {
+  color: var(--ink-soft);
 }
 
-.dark a { color: var(--ink); }
-
-.dark .blog-card,
-.dark .service-card,
-.dark .pricing-card {
-  background: var(--bg-2);
-  border-color: var(--line);
+.dark .tier--feat,
+.dark .pricing-card--featured {
+  background: #111824 !important;
+  border-color: var(--marigold) !important;
 }
 
-.dark .contact-card,
-.dark .faq-item,
-.dark .testimonial-card {
-  background: var(--bg-2);
-  border-color: var(--line);
+/* Forms & Inputs */
+.dark .reserve__container,
+.dark .booking-step,
+.dark .summary-card,
+.dark .contact-form-card {
+  background: var(--bg-2) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+.dark .step-title,
+.dark .summary-title {
+  color: var(--ink);
+  border-bottom-color: var(--line);
+}
+.dark .step-subtitle {
+  color: var(--ink-soft);
+}
+.dark .step-num {
+  background: var(--marigold-soft);
+  color: var(--marigold);
 }
 
 .dark .field input,
 .dark .field select,
-.dark .field textarea {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--line);
-  border-bottom-color: var(--line);
+.dark .field textarea,
+.dark .reserve__form input,
+.dark .reserve__form select,
+.dark .reserve__form textarea,
+.dark .date-input-wrap input,
+.dark #sensoryNotes {
+  background: var(--bg);
+  border: 1px solid var(--line);
   color: var(--ink);
+  color-scheme: dark;
+}
+.dark .field input::placeholder,
+.dark .field textarea::placeholder,
+.dark .reserve__form input::placeholder,
+.dark .reserve__form textarea::placeholder {
+  color: var(--ink-mute);
 }
 .dark .field input:focus,
 .dark .field select:focus,
-.dark .field textarea:focus {
-  border-bottom-color: var(--marigold);
-  background: rgba(255, 255, 255, 0.06);
+.dark .field textarea:focus,
+.dark .date-input-wrap input:focus,
+.dark #sensoryNotes:focus {
+  border-color: var(--marigold);
+  background: rgba(245, 175, 61, 0.05);
 }
 
+/* Booking Experience Cards */
+.dark .exp-card {
+  background: var(--bg-2);
+  border-color: var(--line);
+}
+.dark .exp-card:hover {
+  border-color: var(--marigold);
+  background: rgba(245, 175, 61, 0.08);
+}
+.dark .exp-card.is-selected {
+  border-color: var(--marigold);
+  background: rgba(245, 175, 61, 0.16);
+}
+.dark .exp-card__name {
+  color: var(--ink);
+}
+.dark .exp-card__desc {
+  color: var(--ink-soft);
+}
+.dark .exp-card__badge {
+  background: var(--line);
+  color: var(--ink);
+}
+.dark .exp-card.is-selected .exp-card__badge {
+  background: var(--marigold);
+  color: #0f141e;
+}
+
+/* Booking Slots */
+.dark .slot-chip {
+  background: var(--bg);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.dark .slot-chip:hover {
+  border-color: var(--marigold);
+  background: rgba(245, 175, 61, 0.12);
+}
+.dark .slot-chip.is-selected {
+  background: var(--marigold);
+  border-color: var(--marigold);
+  color: #0f141e;
+}
+.dark .slot-chip.is-selected .slot-chip__spots {
+  color: #0f141e;
+  font-weight: 700;
+}
+
+/* Booking Counters & Addons */
+.dark .counter-box {
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.dark .counter-info h4 {
+  color: var(--ink);
+}
+.dark .counter-btn {
+  background: var(--bg-2);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.dark .counter-btn:hover {
+  background: var(--marigold);
+  border-color: var(--marigold);
+  color: #0f141e;
+}
+.dark .counter-val {
+  color: var(--ink);
+}
+
+.dark .addon-row {
+  background: var(--bg);
+  border-color: var(--line);
+}
+.dark .addon-row:hover {
+  border-color: var(--marigold);
+}
+.dark .addon-row.is-checked {
+  border-color: var(--marigold);
+  background: rgba(245, 175, 61, 0.12);
+}
+.dark .addon-text h5 {
+  color: var(--ink);
+}
+.dark .addon-text p {
+  color: var(--ink-soft);
+}
+
+/* Summary Card */
+.dark .summary-item {
+  color: var(--ink-soft);
+}
+.dark .summary-item strong {
+  color: var(--ink);
+}
+.dark .summary-divider {
+  background: var(--line);
+}
+.dark .summary-total span {
+  color: var(--ink);
+}
+
+/* Modal Confirmation */
+.dark .modal-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+.dark .modal-title {
+  color: var(--ink);
+}
+.dark .modal-qr {
+  background: var(--bg);
+}
+.dark #modalBookingId {
+  color: var(--ink);
+}
+.dark .modal-close-btn {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Membership & Footer */
+.dark .membership {
+  background: #0b0f17;
+}
+.dark .foot {
+  background: #080c13;
+}
+
+/* Dashboards */
 .dark .dash__sidebar {
   background: var(--bg-2);
   border-color: var(--line);
 }
 .dark .dash__main {
   background: var(--bg);
+}
+.dark .dash__card {
+  background: var(--bg-2);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.dark .dash__header {
+  background: var(--bg-2);
+  border-bottom-color: var(--line);
+}
+.dark .dash__table th {
+  background: var(--bg);
+  color: var(--ink-soft);
+  border-bottom-color: var(--line);
+}
+.dark .dash__table td {
+  border-bottom-color: var(--line-soft);
+  color: var(--ink);
 }
 
 /* =====================================================
@@ -2075,6 +2367,161 @@
   }
 }
 
+/* =====================================================
+   WEEKLY DISCOVERY SCHEDULE & PARENT AMENITIES (HOME 2)
+   ===================================================== */
+
+.schedule-tabs {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0 2.5rem;
+}
+
+.tab-pill {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card-bg, #ffffff);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.tab-pill:hover {
+  border-color: var(--marigold);
+  color: var(--ink);
+}
+.tab-pill.is-active {
+  background: var(--marigold);
+  border-color: var(--marigold);
+  color: #1b2230;
+  box-shadow: 0 6px 20px -4px rgba(244, 168, 43, 0.45);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+
+.workshop-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--line-soft);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(27, 34, 48, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.workshop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -12px rgba(27, 34, 48, 0.1);
+  border-color: var(--line);
+}
+
+.workshop-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 1.1rem;
+  align-self: flex-start;
+}
+
+.tag-rose { background: var(--rose-soft); color: var(--rose); }
+.tag-marigold { background: var(--marigold-soft); color: var(--marigold); }
+.tag-grass { background: var(--grass-soft); color: var(--grass); }
+.tag-sky { background: var(--sky-soft); color: var(--sky); }
+
+.workshop-card__time {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-mute);
+  margin-bottom: 0.5rem;
+}
+
+.workshop-card h3 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.workshop-card p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.workshop-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* Amenities Strip */
+.amenities-section {
+  background: var(--bg-2);
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  margin-top: 2rem;
+  border: 1px solid var(--line-soft);
+}
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.amenity-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.amenity-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--line);
+  color: var(--marigold);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+.amenity-content h4 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+.amenity-content p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
 .booking-steps {
   display: flex;
   flex-direction: column;
@@ -2083,6 +2530,37 @@
 
 .booking-step {
   background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: 28px;
+  padding: 2.2rem;
+  box-shadow: 0 10px 30px -10px rgba(27, 34, 48, 0.04);
+}
+
+.step-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.step-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--marigold-soft);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.booking-step {
+  background: var(--card-bg, #ffffff);
   border: 1px solid var(--line-soft);
   border-radius: 28px;
   padding: 2.2rem;
@@ -2137,7 +2615,7 @@
   border-radius: 20px;
   padding: 1.4rem;
   cursor: pointer;
-  background: #fff;
+  background: var(--card-bg, #ffffff);
   transition: all 0.22s ease;
   position: relative;
   display: flex;
@@ -2216,7 +2694,7 @@
   border-radius: 16px;
   font-family: var(--sans);
   font-size: 1rem;
-  background: #fff;
+  background: var(--card-bg, #ffffff);
   color: var(--ink);
   outline: none;
   transition: border-color 0.2s;
@@ -2235,7 +2713,7 @@
   text-align: center;
   border: 1px solid var(--line-soft);
   border-radius: 16px;
-  background: #fff;
+  background: var(--card-bg, #ffffff);
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -2249,7 +2727,7 @@
 .slot-chip.is-selected {
   border-color: var(--marigold);
   background: var(--marigold);
-  color: var(--ink);
+  color: #1b2230;
   font-weight: 700;
 }
 .slot-chip__time {
@@ -2261,8 +2739,8 @@
   color: var(--grass);
 }
 .slot-chip.is-selected .slot-chip__spots {
-  color: var(--ink);
-  opacity: 0.85;
+  color: #1b2230;
+  opacity: 0.9;
 }
 
 /* Counters Row */
@@ -2299,7 +2777,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--card-bg, #ffffff);
   border: 1px solid var(--line-soft);
   font-size: 1.1rem;
   font-weight: 700;
@@ -2312,6 +2790,7 @@
 .counter-btn:hover {
   background: var(--marigold);
   border-color: var(--marigold);
+  color: #1b2230;
 }
 .counter-val {
   font-family: var(--serif);
@@ -2319,6 +2798,7 @@
   font-weight: 700;
   min-width: 20px;
   text-align: center;
+  color: var(--ink);
 }
 
 /* Addons Selection */
@@ -2334,7 +2814,7 @@
   padding: 1rem 1.4rem;
   border: 1px solid var(--line-soft);
   border-radius: 18px;
-  background: #fff;
+  background: var(--card-bg, #ffffff);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -2377,7 +2857,7 @@
 .summary-card {
   position: sticky;
   top: 90px;
-  background: #ffffff;
+  background: var(--card-bg, #ffffff);
   border: 1px solid var(--line-soft);
   border-radius: 28px;
   padding: 2.2rem;
@@ -2426,6 +2906,7 @@
   font-family: var(--serif);
   font-size: 1.15rem;
   font-weight: 600;
+  color: var(--ink);
 }
 .summary-total strong {
   font-family: var(--serif);
@@ -2464,7 +2945,7 @@
   visibility: visible;
 }
 .modal-card {
-  background: #fff;
+  background: var(--card-bg, #ffffff);
   border-radius: 28px;
   padding: 2.5rem 2.2rem;
   max-width: 480px;
@@ -2521,3 +3002,77 @@
   background: var(--marigold);
   color: var(--ink);
 }
+
+/* =====================================================
+   DARK MODE OVERRIDES (FINAL CASCADE LAYER)
+   ===================================================== */
+.dark,
+[data-theme="dark"] {
+  --bg: #0f141e;
+  --bg-2: #172030;
+  --card-bg: #172030;
+  --ink: #fbf8f2;
+  --ink-soft: #c8c2b5;
+  --ink-mute: #8e877a;
+  --line: #2d3a52;
+  --line-soft: #202b3d;
+  --marigold: #f5af3d;
+  --rose: #f08c8c;
+  --grass: #9bd17b;
+  --sky: #83cad9;
+}
+
+.dark .booking-step,
+.dark .summary-card,
+.dark .exp-card,
+.dark .addon-row,
+.dark .modal-card,
+.dark .pillar-card,
+.dark .parent-guide-card,
+.dark .workshop-card,
+.dark .amenities-section {
+  background: var(--bg-2) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+.dark .amenity-icon {
+  background: var(--bg) !important;
+  border-color: var(--line) !important;
+  color: var(--marigold) !important;
+}
+
+.dark .tag-rose { background: rgba(240, 140, 140, 0.22) !important; color: var(--rose) !important; }
+.dark .tag-marigold { background: rgba(245, 175, 61, 0.22) !important; color: var(--marigold) !important; }
+.dark .tag-sky { background: rgba(131, 202, 217, 0.22) !important; color: var(--sky) !important; }
+.dark .tag-grass { background: rgba(155, 209, 123, 0.22) !important; color: var(--grass) !important; }
+
+.dark .date-input-wrap input,
+.dark .slot-chip,
+.dark .counter-box,
+.dark .counter-btn,
+.dark #sensoryNotes {
+  background: var(--bg) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+.dark .exp-card.is-selected {
+  background: rgba(245, 175, 61, 0.16) !important;
+  border-color: var(--marigold) !important;
+}
+.dark .addon-row.is-checked {
+  background: rgba(245, 175, 61, 0.12) !important;
+  border-color: var(--marigold) !important;
+}
+.dark .slot-chip.is-selected {
+  background: var(--marigold) !important;
+  border-color: var(--marigold) !important;
+  color: #0f141e !important;
+}
+.dark .counter-btn:hover {
+  background: var(--marigold) !important;
+  color: #0f141e !important;
+}
+
+

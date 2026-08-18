@@ -9,7 +9,7 @@ var SERVICES_DATA = [
     title: 'Open Play Sessions',
     short: 'Drop in anytime during our open hours. Kids explore age-appropriate zones at their own pace.',
     icon: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
-    image: 'https://images.unsplash.com/photo-1591084728795-1149f32d9866?auto=format&fit=crop&w=800&q=80',
+    image: '../../assets/img7.jpg',
     description: 'Our Open Play sessions give your little ones the freedom to explore all four of our carefully designed play zones at their own pace. Each zone is tailored to specific age groups, ensuring every child finds activities that match their developmental stage. From the gentle sensory walls of The Cocoon for babies to the thrilling climbing wall of The Workshop for older kids, open play is where spontaneous discovery happens.',
     features: [
       'Access to all four age-graded play zones',
@@ -36,7 +36,7 @@ var SERVICES_DATA = [
     title: 'Birthday Party Packages',
     short: 'Stress-free celebrations with private studio hire, themed setup, and dedicated hosts.',
     icon: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
-    image: 'https://images.unsplash.com/photo-1597933470067-bc1ef89d5a8d?auto=format&fit=crop&w=800&q=80',
+    image: '../../assets/birthday-decor.jpg',
     description: 'Birthdays that do the planning for you. Our party packages include private studio hire, a dedicated party host, themed tableware and decorations, cake cutting, and a tidy exit. Choose from three curated party themes or let us build a custom experience. We run the show — you show up and make a wish.',
     features: [
       'Private hire of selected play zones',
@@ -144,7 +144,7 @@ var SERVICES_DATA = [
     title: 'Private Venue Hire',
     short: 'Rent the full studio for corporate events, playdates, or family gatherings.',
     icon: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>',
-    image: 'https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=800&q=80',
+    image: '../../assets/img2.jpg',
     description: 'Need the whole studio? Private Venue Hire gives you exclusive access to all four play zones, the party room, and our maker space. Perfect for corporate family days, community gatherings, school field trips, or intimate celebrations. Our events team handles setup, staffing, and teardown.',
     features: [
       'Exclusive access to all play zones',

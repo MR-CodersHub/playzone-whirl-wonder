@@ -118,7 +118,6 @@ button, input, select, textarea {
 
 /* ---------- Buttons ---------- */
 .btn {
-  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.85rem 1.5rem;
@@ -132,6 +131,8 @@ button, input, select, textarea {
 }
 .btn:hover { transform: translateY(-1px); }
 .btn--solid {
+  display: block;
+  text-align: center;
   background: var(--ink);
   color: var(--bg);
 }
@@ -147,6 +148,7 @@ button, input, select, textarea {
   background: transparent;
   color: var(--ink);
   border-color: var(--ink);
+  text-align: center;
 }
 .btn--line:hover { background: var(--ink); color: var(--bg); }
 .btn--block { width: 100%; justify-content: center; }

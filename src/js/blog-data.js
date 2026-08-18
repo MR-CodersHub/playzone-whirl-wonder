@@ -12,7 +12,7 @@ var BLOG_DATA = [
     author: 'Dr. Lena Moreau',
     date: '2026-08-10',
     readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1591084728795-1149f32d9866?auto=format&fit=crop&w=800&q=80',
+    image: '../../assets/img2.jpg',
     content: `<p>When we think about childhood development, we often gravitate toward structured activities — soccer practice, piano lessons, coding classes. And while those have their place, research increasingly shows that unstructured indoor play is where some of the most important developmental work happens.</p>
 
 <h3>The Science of Free Play</h3>
@@ -32,60 +32,6 @@ var BLOG_DATA = [
 
 <blockquote>Play is the highest form of research. — Albert Einstein</blockquote>`,
     tags: ['indoor play', 'child development', 'sensory play', 'unstructured play']
-  },
-  {
-    id: 'setup-guide',
-    title: 'The Ultimate Kids\' Room Setup Guide for Brooklyn Parents',
-    excerpt: 'How to create a play-friendly home environment that complements studio time — without turning your living room into a toy store.',
-    category: 'Parenting Tips',
-    author: 'Jamie Chen',
-    date: '2026-08-05',
-    readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80',
-    content: `<p>Brooklyn apartments come in all shapes and sizes, but one thing is universal: parents want their kids to have space to play without their entire home becoming a warehouse for plastic toys. Here's our guide to creating a thoughtful play environment at home.</p>
-
-<h3>Start with Zones, Not Stuff</h3>
-<p>Just like our studio has four distinct zones, consider creating mini-zones in your home. A cozy corner with cushions for reading, a hard floor area for building, a sensory bin in the kitchen, and an open space for movement. You don't need a dedicated playroom — even a 4x6 foot corner can serve as a functional play zone.</p>
-
-<h3>Rotation, Not Accumulation</h3>
-<p>Children engage more deeply with fewer toys. Research from the University of Toledo found that toddlers presented with 16 toys played with each for an average of 1.5 minutes, while those with 4 toys played for 4.5 minutes each. Keep a "toy library" — store most toys away and rotate weekly.</p>
-
-<h3>The Floor is the Best Toy</h3>
-<p>Open floor space is the most underrated play feature in any home. Clear a 6x6 foot area and you've created an invitation for anything: dance, building, imaginary play, wrestling. Resist the urge to fill it.</p>
-
-<h3>Lighting Matters</h3>
-<p>Natural light is ideal for daytime play. For evenings, avoid harsh overhead fluorescents — they overstimulate. Warm-toned lamps or string lights create a calmer environment that supports winding down before bed.</p>
-
-<h3>When to Say "Enough"</h3>
-<p>You don't need expensive Montessori materials or STEM kits. A cardboard box, a wooden spoon, and a pot make a better play set than most $50 toys. Trust your child's imagination — it's more powerful than any product description.</p>`,
-    tags: ['home setup', 'play environment', 'minimalism', 'parenting']
-  },
-  {
-    id: 'allergy-friendly-parties',
-    title: 'How to Plan an Allergy-Friendly Kids\' Party Without the Stress',
-    excerpt: 'Nut-free, dairy-free, gluten-free — our complete guide to hosting a celebration where every kid can safely enjoy the food and fun.',
-    category: 'Party Planning',
-    author: 'Priya Lakshmi',
-    date: '2026-07-28',
-    readTime: '7 min read',
-    image: 'https://images.unsplash.com/photo-1597933470067-bc1ef89d5a8d?auto=format&fit=crop&w=800&q=80',
-    content: `<p>Planning a child's birthday party is already a juggling act. Add food allergies to the mix and it can feel overwhelming. But here's the good news: allergy-friendly party planning is entirely manageable when you approach it systematically.</p>
-
-<h3>Know the Big Nine</h3>
-<p>The FDA recognizes nine major food allergens: milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame. At children's parties, the most common are peanuts, tree nuts, milk, eggs, and wheat. Knowing your guest list's needs in advance is step one.</p>
-
-<h3>The Safe Menu Formula</h3>
-<p>Our go-to party menu is naturally free of most allergens: fresh fruit skewers, rice paper rolls with vegetables, popcorn bars, and sunflower seed butter sandwiches. For cake, many Brooklyn bakeries now specialize in allergen-free options — we recommend starting there.</p>
-
-<h3>Beyond Food: Other Allergens</h3>
-<p>Food isn't the only allergen at parties. Latex balloons, certain face paints, and even some craft supplies can trigger reactions. At Whirl & Wonder, we use latex-free balloons and hypoallergenic face paint as standard.</p>
-
-<h3>Communication is Key</h3>
-<p>Include an allergy question on your RSVP. Something simple: "Does your child have any food allergies or dietary restrictions? Please let us know so we can ensure they're included in all the fun." This normalizes the conversation and shows consideration.</p>
-
-<h3>When in Doubt, Label Everything</h3>
-<p>Use small cards to label every food item with its ingredients. It takes five minutes and can prevent a potentially dangerous situation. Parents of allergic children will deeply appreciate the effort.</p>`,
-    tags: ['allergies', 'party planning', 'food safety', 'inclusive']
   },
   {
     id: 'sensory-play-guide',
