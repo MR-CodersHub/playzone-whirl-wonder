@@ -1,0 +1,177 @@
+/* =====================================================
+   Whirl & Wonder — Login page
+   Split layout, full-height, scrollable
+   ===================================================== */
+
+.login-page {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.login {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 100vh;
+  padding-top: 70px; /* room for fixed nav */
+}
+@media (max-width: 900px) {
+  .login { grid-template-columns: 1fr; }
+}
+
+/* ---------- Brand panel (left) ---------- */
+.login__brand {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 900px) { .login__brand { display: none; } }
+.login__brand-bg { position: absolute; inset: 0; }
+.login__brand-bg img { width: 100%; height: 100%; object-fit: cover; }
+.login__brand-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(27, 34, 48, 0.5) 0%, rgba(27, 34, 48, 0.85) 100%),
+    radial-gradient(circle at 20% 80%, rgba(244, 168, 43, 0.3), transparent 55%);
+}
+.login__brand-content {
+  position: relative;
+  z-index: 2;
+  padding: 3.5rem;
+  color: #fff;
+  max-width: 520px;
+}
+.login__brand-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+.login__brand-title em { font-style: italic; color: var(--marigold); }
+.login__brand-lede {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 252, 246, 0.85);
+  margin-bottom: 2rem;
+  max-width: 42ch;
+}
+.login__brand-list {
+  display: flex; flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: rgba(255, 252, 246, 0.85);
+}
+.login__brand-list li {
+  display: flex; align-items: center; gap: 0.65rem;
+}
+
+/* ---------- Form panel (right) ---------- */
+.login__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background: var(--bg);
+}
+@media (max-width: 900px) {
+  .login__panel { padding: 2.5rem 1.25rem 4rem; }
+}
+.login__panel-inner {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+.login__back:hover { color: var(--ink); gap: 0.6rem; }
+.login__back svg { transform: scaleX(-1); }
+
+.login__head { margin-bottom: 2rem; }
+.login__head .eyebrow { margin-bottom: 0.6rem; }
+.login__head h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.85rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.5rem;
+}
+.login__head p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.login__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-top: -0.25rem;
+}
+@media (max-width: 480px) {
+  .login__row { flex-direction: column; align-items: flex-start; gap: 0.65rem; }
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+.check input { accent-color: var(--marigold); width: 15px; height: 15px; }
+
+.login__link {
+  color: var(--marigold);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.login__link:hover { color: var(--ink); text-decoration: underline; }
+
+.login__alt {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+}
+
+.login__success {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: #e6f4ea;
+  border: 1px solid #b8dec0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2a5a36;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.login__demo {
+  margin-top: 0.5rem;
+  padding: 0.95rem 1.1rem;
+  background: var(--marigold-soft);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.login__demo strong { color: var(--ink); }
