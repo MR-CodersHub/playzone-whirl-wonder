@@ -21,16 +21,13 @@
   var links = [
     { href: base + 'index.html', text: 'Home', id: 'home' },
     { href: base + 'public/pages/home-2.html', text: 'Home 2', id: 'home-2' },
-    { href: base + 'public/pages/services.html', text: 'Services', id: 'services' },
-    { href: base + 'public/pages/booking.html', text: 'Booking', id: 'booking' },
     { href: base + 'public/pages/about.html', text: 'About', id: 'about' },
+    { href: base + 'public/pages/services.html', text: 'Services', id: 'services' },
     { href: base + 'public/pages/blog.html', text: 'Blog', id: 'blog' },
     { href: base + 'public/pages/contact.html', text: 'Contact', id: 'contact' }
   ];
 
   var currentPath = window.location.pathname.replace(/\\/g, '/').toLowerCase();
-
-  var logoSvg = '<svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="5"/><line x1="16" y1="3" x2="16" y2="8"/><line x1="16" y1="24" x2="16" y2="29"/><line x1="3" y1="16" x2="8" y2="16"/><line x1="24" y1="16" x2="29" y2="16"/><line x1="6.6" y1="6.6" x2="10.2" y2="10.2"/><line x1="21.8" y1="21.8" x2="25.4" y2="25.4"/><line x1="6.6" y1="25.4" x2="10.2" y2="21.8"/><line x1="21.8" y1="10.2" x2="25.4" y2="6.6"/></svg>';
 
   var navLinksHtml = links.map(function (l) {
     var isActive = false;
@@ -49,6 +46,7 @@
     '</a>' +
     '<ul class="nav__links">' + navLinksHtml + '</ul>' +
     '<div class="nav__actions">' +
+    '<a href="' + base + 'public/pages/booking.html" class="nav__cta-btn">Book a slot</a>' +
     '<div class="nav__profile-wrap">' +
     '<button class="nav__profile-btn" id="profileToggle" aria-label="Profile menu" aria-expanded="false">' +
     '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +

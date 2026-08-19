@@ -80,8 +80,77 @@ var Dashboard = (function () {
     }
   }
 
+  function initSectionNavigation() {
+    var navItems = document.querySelectorAll('.dash__nav-item[data-target]');
+    var sections = document.querySelectorAll('.dash-section');
+    if (!navItems.length || !sections.length) return;
+
+    function switchSection(targetId) {
+      var activeSec = document.getElementById(targetId);
+      if (!activeSec) return;
+
+      sections.forEach(function (sec) {
+        if (sec.id === targetId) {
+          sec.style.display = 'block';
+          sec.classList.add('is-active');
+        } else {
+          sec.style.display = 'none';
+          sec.classList.remove('is-active');
+        }
+      });
+
+      navItems.forEach(function (item) {
+        if (item.getAttribute('data-target') === targetId) {
+          item.classList.add('dash__nav-item--active');
+        } else {
+          item.classList.remove('dash__nav-item--active');
+        }
+      });
+
+      var sidebar = document.querySelector('.dash__sidebar');
+      if (sidebar && sidebar.classList.contains('is-open')) {
+        sidebar.classList.remove('is-open');
+      }
+
+      window.dispatchEvent(new Event('resize'));
+    }
+
+    navItems.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = item.getAttribute('data-target');
+        if (target) {
+          try {
+            history.replaceState(null, '', '#' + target);
+          } catch(err) {}
+          switchSection(target);
+        }
+      });
+    });
+
+    var initialHash = window.location.hash.replace('#', '');
+    if (initialHash && document.getElementById(initialHash)) {
+      switchSection(initialHash);
+    } else {
+      var firstActive = document.querySelector('.dash__nav-item--active');
+      if (firstActive && firstActive.getAttribute('data-target')) {
+        switchSection(firstActive.getAttribute('data-target'));
+      } else if (sections.length > 0) {
+        switchSection(sections[0].id);
+      }
+    }
+
+    window.addEventListener('hashchange', function () {
+      var hash = window.location.hash.replace('#', '');
+      if (hash && document.getElementById(hash)) {
+        switchSection(hash);
+      }
+    });
+  }
+
   return {
     initDashboardCharts: initDashboardCharts,
-    initDashNav: initDashNav
+    initDashNav: initDashNav,
+    initSectionNavigation: initSectionNavigation
   };
 })();

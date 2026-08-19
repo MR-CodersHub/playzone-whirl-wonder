@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Dashboard · Whirl & Wonder</title>
+  <title>Admin Dashboard · Whirl &amp; Wonder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
@@ -16,26 +16,26 @@
     <!-- Sidebar -->
     <aside class="dash__sidebar">
       <div class="dash__sidebar-brand">
-        <img src="../../../assets/logo.png" alt="Whirl &amp; Wonder Logo" width="28" height="28" style="object-fit:contain;" />
+        <img src="../../../assets/logo.png" alt="Whirl &amp; Wonder Logo" width="32" height="32" style="object-fit:contain;" />
         <div>
           <strong>Admin Panel</strong>
           <span>Whirl &amp; Wonder</span>
         </div>
       </div>
 
-      <a class="dash__nav-item dash__nav-item--active">
+      <a class="dash__nav-item dash__nav-item--active" data-target="sec-dashboard">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         Dashboard
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-users">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         Users
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-bookings">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         Bookings
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-sessions">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Sessions
       </a>
@@ -43,15 +43,15 @@
       <div class="dash__nav-group">
         <div class="dash__nav-group-title">Management</div>
       </div>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-services">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
         Services
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-blog">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
         Blog Posts
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-reports">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         Reports
       </a>
@@ -59,7 +59,7 @@
       <div class="dash__nav-group">
         <div class="dash__nav-group-title">Account</div>
       </div>
-      <a href="../pages/settings.html" class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-settings">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         Settings
       </a>
@@ -71,95 +71,554 @@
 
     <!-- Main Content -->
     <main class="dash__main">
-      <div class="dash__header">
-        <div>
-          <h1>Admin Dashboard</h1>
-          <p>Welcome back, Marcus. Here's what's happening today.</p>
-        </div>
-        <div style="display:flex;gap:0.5rem;">
-          <button class="btn btn--line" style="font-size:0.82rem;padding:0.55rem 1rem;">Export data</button>
-          <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">+ Add service</button>
-        </div>
-      </div>
 
-      <!-- Stats -->
-      <div class="dash-stats">
-        <div class="dash-stat">
-          <div class="dash-stat__label">Total Users</div>
-          <div class="dash-stat__value">2,847</div>
-          <div class="dash-stat__change dash-stat__change--up">+12.5% from last month</div>
+      <!-- SECTION: Dashboard / Overview -->
+      <section class="dash-section is-active" id="sec-dashboard">
+        <div class="dash__header">
+          <div>
+            <h1>Admin Dashboard</h1>
+            <p>Welcome back, Marcus. Here's what's happening today at Whirl &amp; Wonder.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <button class="btn btn--line" style="font-size:0.82rem;padding:0.55rem 1rem;">Export data</button>
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;" onclick="document.querySelector('[data-target=\'sec-services\']').click()">+ Add service</button>
+          </div>
         </div>
-        <div class="dash-stat">
-          <div class="dash-stat__label">Active Members</div>
-          <div class="dash-stat__value">412</div>
-          <div class="dash-stat__change dash-stat__change--up">+8.3% from last month</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat__label">Bookings This Week</div>
-          <div class="dash-stat__value">186</div>
-          <div class="dash-stat__change dash-stat__change--up">+15% from last week</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat__label">Revenue (Aug)</div>
-          <div class="dash-stat__value">$24.5K</div>
-          <div class="dash-stat__change dash-stat__change--up">+22% from last month</div>
-        </div>
-      </div>
 
-      <!-- Charts Row -->
-      <div class="dash-grid-2">
+        <!-- Stats -->
+        <div class="dash-stats">
+          <div class="dash-stat">
+            <div class="dash-stat__label">Total Users</div>
+            <div class="dash-stat__value">2,847</div>
+            <div class="dash-stat__change dash-stat__change--up">+12.5% from last month</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat__label">Active Members</div>
+            <div class="dash-stat__value">412</div>
+            <div class="dash-stat__change dash-stat__change--up">+8.3% from last month</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat__label">Bookings This Week</div>
+            <div class="dash-stat__value">186</div>
+            <div class="dash-stat__change dash-stat__change--up">+15% from last week</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat__label">Revenue (Aug)</div>
+            <div class="dash-stat__value">$24.5K</div>
+            <div class="dash-stat__change dash-stat__change--up">+22% from last month</div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Weekly Bookings</h3>
+              <span style="font-size:0.78rem;color:var(--ink-mute);">This week</span>
+            </div>
+            <div class="dash-chart" data-chart="bar"></div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Visitor Distribution</h3>
+              <span style="font-size:0.78rem;color:var(--ink-mute);">By category</span>
+            </div>
+            <div class="dash-chart" data-chart="donut"></div>
+          </div>
+        </div>
+
+        <!-- Monthly Trend -->
+        <div class="dash-card" style="margin-bottom:2rem;">
+          <div class="dash-card__header">
+            <h3>Monthly Revenue Trend</h3>
+            <span style="font-size:0.78rem;color:var(--ink-mute);">2026</span>
+          </div>
+          <div class="dash-chart" data-chart="line"></div>
+        </div>
+
+        <!-- Recent Bookings Table -->
         <div class="dash-card">
           <div class="dash-card__header">
-            <h3>Weekly Bookings</h3>
-            <span style="font-size:0.78rem;color:var(--ink-mute);">This week</span>
+            <h3>Recent Bookings</h3>
+            <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;" onclick="document.querySelector('[data-target=\'sec-bookings\']').click()">View all bookings &rarr;</button>
           </div>
-          <div class="dash-chart" data-chart="bar"></div>
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Family</th>
+                  <th>Service</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Maya R.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">mayar@email.com</span></td><td>Family Membership</td><td>Aug 18, 2026</td><td><span class="dash-badge dash-badge--green">Active</span></td><td>$179/mo</td></tr>
+                <tr><td><strong>Devon L.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">devon@email.com</span></td><td>Wildfire Party</td><td>Aug 22, 2026</td><td><span class="dash-badge dash-badge--yellow">Confirmed</span></td><td>$545</td></tr>
+                <tr><td><strong>Sarah K.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">sarahk@email.com</span></td><td>10-Visit Pass</td><td>Aug 16, 2026</td><td><span class="dash-badge dash-badge--green">Active</span></td><td>$110</td></tr>
+                <tr><td><strong>Marcus T.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">marcust@email.com</span></td><td>Sibling Plan</td><td>Aug 15, 2026</td><td><span class="dash-badge dash-badge--green">Active</span></td><td>$129/mo</td></tr>
+                <tr><td><strong>Elena M.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">elenam@email.com</span></td><td>Open Play</td><td>Aug 14, 2026</td><td><span class="dash-badge dash-badge--blue">Completed</span></td><td>$14</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </section>
+
+      <!-- SECTION: Users -->
+      <section class="dash-section" id="sec-users">
+        <div class="dash__header">
+          <div>
+            <h1>User Management</h1>
+            <p>Manage studio members, family accounts, and visiting parents.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">+ Add New User</button>
+          </div>
+        </div>
+
         <div class="dash-card">
-          <div class="dash-card__header">
-            <h3>Visitor Distribution</h3>
-            <span style="font-size:0.78rem;color:var(--ink-mute);">By category</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem;">
+            <input type="text" placeholder="Search users by name, email, or child..." style="padding:0.6rem 1rem;border:1px solid var(--line);border-radius:999px;font-size:0.88rem;min-width:280px;background:var(--bg);color:var(--ink);" />
+            <div style="display:flex;gap:0.5rem;">
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.8rem;">Filter: All Users</button>
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.8rem;">Export CSV</button>
+            </div>
           </div>
-          <div class="dash-chart" data-chart="donut"></div>
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>User &amp; Email</th>
+                  <th>Membership Tier</th>
+                  <th>Children</th>
+                  <th>Total Visits</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Jamie Chen</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">jamie.c@example.com</span></td>
+                  <td><span class="dash-badge dash-badge--yellow">Family Unlimited</span></td>
+                  <td>Ava (5), Leo (2)</td>
+                  <td>28 visits</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Maya Robinson</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">mayar@email.com</span></td>
+                  <td><span class="dash-badge dash-badge--yellow">Family Membership</span></td>
+                  <td>Zoe (4)</td>
+                  <td>14 visits</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Devon Lewis</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">devon@email.com</span></td>
+                  <td><span class="dash-badge dash-badge--blue">Party Host</span></td>
+                  <td>Kai (6)</td>
+                  <td>6 visits</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Sarah Jenkins</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">sarahk@email.com</span></td>
+                  <td><span class="dash-badge dash-badge--blue">10-Pass Holder</span></td>
+                  <td>Noah (3)</td>
+                  <td>8 visits</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Elena Moreno</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">elenam@email.com</span></td>
+                  <td><span class="dash-badge dash-badge--gray">Drop-in Guest</span></td>
+                  <td>Mateo (4)</td>
+                  <td>3 visits</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Monthly Trend -->
-      <div class="dash-card" style="margin-bottom:2rem;">
-        <div class="dash-card__header">
-          <h3>Monthly Revenue Trend</h3>
-          <span style="font-size:0.78rem;color:var(--ink-mute);">2026</span>
+      <!-- SECTION: Bookings -->
+      <section class="dash-section" id="sec-bookings">
+        <div class="dash__header">
+          <div>
+            <h1>Bookings Management</h1>
+            <p>Track all studio reservations, open play passes, and party bookings.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">+ New Reservation</button>
+          </div>
         </div>
-        <div class="dash-chart" data-chart="line"></div>
-      </div>
 
-      <!-- Recent Bookings Table -->
-      <div class="dash-card">
-        <div class="dash-card__header">
-          <h3>Recent Bookings</h3>
-          <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">View all</button>
+        <div class="dash-card">
+          <div style="display:flex;gap:0.5rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+            <button class="btn btn--solid" style="font-size:0.8rem;padding:0.4rem 0.9rem;">All (186)</button>
+            <button class="btn btn--line" style="font-size:0.8rem;padding:0.4rem 0.9rem;">Confirmed (142)</button>
+            <button class="btn btn--line" style="font-size:0.8rem;padding:0.4rem 0.9rem;">Pending (28)</button>
+            <button class="btn btn--line" style="font-size:0.8rem;padding:0.4rem 0.9rem;">Completed (16)</button>
+          </div>
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Family / Child</th>
+                  <th>Play Program</th>
+                  <th>Date &amp; Time Slot</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>#WW-8492</code></td>
+                  <td><strong>Jamie Chen</strong><br/><small style="color:var(--ink-mute);">Ava &amp; Leo</small></td>
+                  <td>Open Play (2 Hrs)</td>
+                  <td>Aug 20, 2026 · 11:30 AM</td>
+                  <td><span class="dash-badge dash-badge--green">Confirmed</span></td>
+                  <td>$28.00</td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Manage</button></td>
+                </tr>
+                <tr>
+                  <td><code>#WW-8493</code></td>
+                  <td><strong>Devon Lewis</strong><br/><small style="color:var(--ink-mute);">Kai (Birthday)</small></td>
+                  <td>Wildfire Party (16 kids)</td>
+                  <td>Aug 22, 2026 · 2:00 PM</td>
+                  <td><span class="dash-badge dash-badge--yellow">Pending</span></td>
+                  <td>$545.00</td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Approve</button></td>
+                </tr>
+                <tr>
+                  <td><code>#WW-8494</code></td>
+                  <td><strong>Maya Robinson</strong><br/><small style="color:var(--ink-mute);">Zoe</small></td>
+                  <td>Sensory Discovery Lab</td>
+                  <td>Aug 21, 2026 · 9:30 AM</td>
+                  <td><span class="dash-badge dash-badge--green">Confirmed</span></td>
+                  <td>$22.00</td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Manage</button></td>
+                </tr>
+                <tr>
+                  <td><code>#WW-8495</code></td>
+                  <td><strong>Chloe Williams</strong><br/><small style="color:var(--ink-mute);">Ethan</small></td>
+                  <td>Little Engineers STEM</td>
+                  <td>Aug 23, 2026 · 3:30 PM</td>
+                  <td><span class="dash-badge dash-badge--green">Confirmed</span></td>
+                  <td>$25.00</td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Manage</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div style="overflow-x:auto;">
-          <table class="dash-table">
-            <thead>
-              <tr>
-                <th>Family</th>
-                <th>Service</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Maya R.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">mayar@email.com</span></td><td>Family Membership</td><td>Aug 18, 2026</td><td><span class="dash-badge dash-badge--green">Active</span></td><td>$179/mo</td></tr>
-              <tr><td><strong>Devon L.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">devon@email.com</span></td><td>Wildfire Party</td><td>Aug 22, 2026</td><td><span class="dash-badge dash-badge--yellow">Confirmed</span></td><td>$545</td></tr>
-              <tr><td><strong>Sarah K.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">sarahk@email.com</span></td><td>10-Visit Pass</td><td>Aug 16, 2026</td><td><span class="dash-badge dash-badge--green">Active</span></td><td>$110</td></tr>
-              <tr><td><strong>Marcus T.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">marcust@email.com</span></td><td>Sibling Plan</td><td>Aug 15, 2026</td><td><span class="dash-badge dash-badge--green">Active</span></td><td>$129/mo</td></tr>
-              <tr><td><strong>Elena M.</strong><br/><span style="font-size:0.78rem;color:var(--ink-mute);">elenam@email.com</span></td><td>Open Play</td><td>Aug 14, 2026</td><td><span class="dash-badge dash-badge--blue">Completed</span></td><td>$14</td></tr>
-            </tbody>
-          </table>
+      </section>
+
+      <!-- SECTION: Sessions -->
+      <section class="dash-section" id="sec-sessions">
+        <div class="dash__header">
+          <div>
+            <h1>Studio Sessions &amp; Capacity</h1>
+            <p>Live capacity monitoring, HEPA air balance, and zone occupancy.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">+ Schedule New Session</button>
+          </div>
         </div>
-      </div>
+
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Today's Play Slots (Aug 18, 2026)</h3>
+              <span class="dash-badge dash-badge--green">Studio Open</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="padding:1rem;background:var(--bg-2);border-radius:12px;border:1px solid var(--line-soft);">
+                <div style="display:flex;justify-content:space-between;margin-bottom:0.4rem;">
+                  <strong>Morning Sensory &amp; Toddler Lab</strong>
+                  <span style="font-weight:700;color:var(--marigold);">18 / 20 Booked (90%)</span>
+                </div>
+                <div style="font-size:0.82rem;color:var(--ink-mute);margin-bottom:0.6rem;">9:00 AM – 11:00 AM · The Meadow &amp; The Cocoon</div>
+                <div style="width:100%;height:8px;background:var(--bg);border-radius:999px;overflow:hidden;">
+                  <div style="width:90%;height:100%;background:var(--marigold);border-radius:999px;"></div>
+                </div>
+              </div>
+
+              <div style="padding:1rem;background:var(--bg-2);border-radius:12px;border:1px solid var(--line-soft);">
+                <div style="display:flex;justify-content:space-between;margin-bottom:0.4rem;">
+                  <strong>Midday Open Play &amp; Climb</strong>
+                  <span style="font-weight:700;color:var(--grass);">12 / 24 Booked (50%)</span>
+                </div>
+                <div style="font-size:0.82rem;color:var(--ink-mute);margin-bottom:0.6rem;">11:30 AM – 1:30 PM · The Skyfort &amp; Active Zone</div>
+                <div style="width:100%;height:8px;background:var(--bg);border-radius:999px;overflow:hidden;">
+                  <div style="width:50%;height:100%;background:var(--grass);border-radius:999px;"></div>
+                </div>
+              </div>
+
+              <div style="padding:1rem;background:var(--bg-2);border-radius:12px;border:1px solid var(--line-soft);">
+                <div style="display:flex;justify-content:space-between;margin-bottom:0.4rem;">
+                  <strong>Afternoon STEAM &amp; Clay Workshop</strong>
+                  <span style="font-weight:700;color:var(--sky);">14 / 16 Booked (88%)</span>
+                </div>
+                <div style="font-size:0.82rem;color:var(--ink-mute);margin-bottom:0.6rem;">2:00 PM – 4:00 PM · Studio Lab B</div>
+                <div style="width:100%;height:8px;background:var(--bg);border-radius:999px;overflow:hidden;">
+                  <div style="width:88%;height:100%;background:var(--sky);border-radius:999px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Zone Health &amp; Environment</h3>
+              <span style="font-size:0.78rem;color:var(--ink-mute);">Real-time metrics</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:0.85rem;background:var(--bg-2);border-radius:12px;">
+                <div><strong>HEPA-13 Air Filtration</strong><br/><span style="font-size:0.8rem;color:var(--ink-mute);">6.2 Air changes/hour</span></div>
+                <span class="dash-badge dash-badge--green">Optimal 99.97%</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:0.85rem;background:var(--bg-2);border-radius:12px;">
+                <div><strong>Studio Noise Level</strong><br/><span style="font-size:0.8rem;color:var(--ink-mute);">Acoustic dampening active</span></div>
+                <span class="dash-badge dash-badge--green">64 dB (Gentle)</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:0.85rem;background:var(--bg-2);border-radius:12px;">
+                <div><strong>Sanitization Schedule</strong><br/><span style="font-size:0.8rem;color:var(--ink-mute);">UV-C cycle every 2 hours</span></div>
+                <span class="dash-badge dash-badge--blue">Completed 1:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Services -->
+      <section class="dash-section" id="sec-services">
+        <div class="dash__header">
+          <div>
+            <h1>Services &amp; Packages</h1>
+            <p>Manage pricing, party tiers, workshops, and age restrictions.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">+ Add New Service</button>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Service Name</th>
+                  <th>Category</th>
+                  <th>Age Range</th>
+                  <th>Base Price</th>
+                  <th>Capacity</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Open Play Pass</strong></td>
+                  <td>Drop-in Play</td>
+                  <td>Ages 0–12</td>
+                  <td>$14 / session</td>
+                  <td>24 kids</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Sunbeam Birthday Party</strong></td>
+                  <td>Parties</td>
+                  <td>Ages 3–6</td>
+                  <td>$385 (2 hrs)</td>
+                  <td>10 kids</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Wildfire Birthday Party</strong></td>
+                  <td>Parties</td>
+                  <td>Ages 5–10</td>
+                  <td>$545 (2.5 hrs)</td>
+                  <td>16 kids</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Constellation Party</strong></td>
+                  <td>Parties</td>
+                  <td>Ages 7–12</td>
+                  <td>$895 (3 hrs)</td>
+                  <td>24 kids</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Monthly Family Membership</strong></td>
+                  <td>Subscriptions</td>
+                  <td>All Ages</td>
+                  <td>$179 / mo</td>
+                  <td>Unlimited</td>
+                  <td><span class="dash-badge dash-badge--green">Active</span></td>
+                  <td><button class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">Edit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Blog Posts -->
+      <section class="dash-section" id="sec-blog">
+        <div class="dash__header">
+          <div>
+            <h1>Studio Journal &amp; Articles</h1>
+            <p>Publish parenting guides, sensory play tips, and studio news.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">+ Write New Article</button>
+          </div>
+        </div>
+
+        <div class="dash-card">
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Article Title</th>
+                  <th>Category</th>
+                  <th>Author</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Why Indoor Play Matters More Than You Think</strong></td>
+                  <td>Play &amp; Development</td>
+                  <td>Dr. Lena Moreau</td>
+                  <td>Aug 10, 2026</td>
+                  <td><span class="dash-badge dash-badge--green">Published</span></td>
+                  <td><a href="../../pages/blog-details.html?id=indoor-play-benefits" class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A Parent's Guide to Sensory Play: What It Is and Why Kids Need It</strong></td>
+                  <td>Parenting Tips</td>
+                  <td>Marcus Thorne</td>
+                  <td>Jul 20, 2026</td>
+                  <td><span class="dash-badge dash-badge--green">Published</span></td>
+                  <td><a href="../../pages/blog-details.html?id=sensory-play-guide" class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Behind the Scenes: How We Clean and Sanitize Every Night</strong></td>
+                  <td>Studio Life</td>
+                  <td>Elena Rostova</td>
+                  <td>Aug 2, 2026</td>
+                  <td><span class="dash-badge dash-badge--green">Published</span></td>
+                  <td><a href="../../pages/blog-details.html?id=behind-the-scenes-cleaning" class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Planning the Ultimate Stress-Free Birthday Party</strong></td>
+                  <td>Party Planning</td>
+                  <td>Sarah Jenkins</td>
+                  <td>Jul 5, 2026</td>
+                  <td><span class="dash-badge dash-badge--green">Published</span></td>
+                  <td><a href="../../pages/blog-details.html?id=stress-free-birthday-guide" class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.6rem;">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Reports -->
+      <section class="dash-section" id="sec-reports">
+        <div class="dash__header">
+          <div>
+            <h1>Analytics &amp; Financial Reports</h1>
+            <p>Monthly revenue performance, guest demographics, and retention.</p>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <button class="btn btn--line" style="font-size:0.82rem;padding:0.55rem 1rem;">Download PDF Report</button>
+            <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">Export Financials</button>
+          </div>
+        </div>
+
+        <div class="dash-grid-2" style="margin-bottom:1.5rem;">
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Revenue Streams Breakdown</h3>
+              <span style="font-size:0.78rem;color:var(--ink-mute);">Current Quarter</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.85rem;">
+              <div style="display:flex;justify-content:space-between;font-size:0.9rem;">
+                <span>Monthly Memberships</span>
+                <strong>$42,850 (52%)</strong>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:0.9rem;">
+                <span>Private Birthday Parties</span>
+                <strong>$24,600 (30%)</strong>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:0.9rem;">
+                <span>Drop-in &amp; Workshop Passes</span>
+                <strong>$14,950 (18%)</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Safety &amp; Sanitation Audits</h3>
+              <span class="dash-badge dash-badge--green">100% Passed</span>
+            </div>
+            <p style="font-size:0.88rem;color:var(--ink-soft);margin-bottom:1rem;">All quarterly HEPA filtration and non-toxic surface safety inspections passed NYC Board standards.</p>
+            <button class="btn btn--line" style="font-size:0.82rem;padding:0.5rem 1rem;">View Safety Certificate ↗</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: Settings -->
+      <section class="dash-section" id="sec-settings">
+        <div class="dash__header">
+          <div>
+            <h1>Studio Settings &amp; Configuration</h1>
+            <p>Operating hours, capacity ceilings, and admin credentials.</p>
+          </div>
+          <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">Save Changes</button>
+        </div>
+
+        <div class="dash-card" style="max-width:800px;">
+          <form onsubmit="event.preventDefault(); alert('Settings saved successfully!');">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;">
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Studio Name</label>
+                <input type="text" value="Whirl &amp; Wonder Indoor Play Studio" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Studio Address</label>
+                <input type="text" value="412 Vanderbilt Ave, Brooklyn, NY 11238" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Max Studio Capacity</label>
+                <input type="number" value="65" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Support Phone</label>
+                <input type="tel" value="(718) 555-0142" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+            </div>
+            <button type="submit" class="btn--brand-pill" style="padding:0.65rem 1.75rem;">Update Configuration</button>
+          </form>
+        </div>
+      </section>
+
     </main>
   </div>
 
@@ -172,6 +631,7 @@
   document.addEventListener('DOMContentLoaded', function(){
     Dashboard.initDashboardCharts();
     Dashboard.initDashNav();
+    Dashboard.initSectionNavigation();
   });
   </script>
 </body>

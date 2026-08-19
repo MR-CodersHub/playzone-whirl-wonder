@@ -251,6 +251,31 @@ button, input, select, textarea {
 }
 .nav__cta:hover { background: var(--marigold); color: var(--ink); }
 
+.nav__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--marigold);
+  color: #1b2230 !important;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.52rem 1.25rem;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 4px 14px -2px rgba(244, 168, 43, 0.45);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav__cta-btn:hover {
+  background: #ffb83d;
+  color: #1b2230 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -2px rgba(244, 168, 43, 0.65);
+}
+
 @media (max-width: 900px) {
   .nav__links { display: none; }
 }

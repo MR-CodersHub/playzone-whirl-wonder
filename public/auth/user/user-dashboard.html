@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Dashboard · Whirl & Wonder</title>
+  <title>My Dashboard · Whirl &amp; Wonder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet"/>
@@ -16,26 +16,26 @@
     <!-- Sidebar -->
     <aside class="dash__sidebar">
       <div class="dash__sidebar-brand">
-        <img src="../../../assets/logo.png" alt="Whirl &amp; Wonder Logo" width="28" height="28" style="object-fit:contain;" />
+        <img src="../../../assets/logo.png" alt="Whirl &amp; Wonder Logo" width="32" height="32" style="object-fit:contain;" />
         <div>
           <strong>My Dashboard</strong>
           <span>Family Account</span>
         </div>
       </div>
 
-      <a class="dash__nav-item dash__nav-item--active">
+      <a class="dash__nav-item dash__nav-item--active" data-target="sec-overview">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         Overview
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-bookings">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         My Bookings
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-children">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         My Children
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-membership">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         Membership
       </a>
@@ -43,11 +43,11 @@
       <div class="dash__nav-group">
         <div class="dash__nav-group-title">Account</div>
       </div>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-profile">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         Profile
       </a>
-      <a class="dash__nav-item">
+      <a class="dash__nav-item" data-target="sec-settings">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         Settings
       </a>
@@ -59,132 +59,339 @@
 
     <!-- Main Content -->
     <main class="dash__main">
-      <div class="dash__header">
-        <div>
-          <h1>Welcome back, Jamie!</h1>
-          <p>Here's your family's activity overview.</p>
-        </div>
-        <a href="../pages/services.html" class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1rem;">Book a session</a>
-      </div>
 
-      <!-- Stats -->
-      <div class="dash-stats">
-        <div class="dash-stat">
-          <div class="dash-stat__label">Visits This Month</div>
-          <div class="dash-stat__value">8</div>
-          <div class="dash-stat__change dash-stat__change--up">+2 from last month</div>
+      <!-- SECTION: Overview -->
+      <section class="dash-section is-active" id="sec-overview">
+        <div class="dash__header">
+          <div>
+            <h1>Welcome back, Jamie!</h1>
+            <p>Here's your family's play schedule and membership overview.</p>
+          </div>
+          <a href="../../pages/booking.html" class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1.25rem;">Book a session &rarr;</a>
         </div>
-        <div class="dash-stat">
-          <div class="dash-stat__label">Membership</div>
-          <div class="dash-stat__value">Family</div>
-          <div class="dash-stat__change" style="color:var(--ink-mute);">Active since Mar 2026</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat__label">Guest Passes</div>
-          <div class="dash-stat__value">2</div>
-          <div class="dash-stat__change" style="color:var(--ink-mute);">Available this month</div>
-        </div>
-        <div class="dash-stat">
-          <div class="dash-stat__label">Children</div>
-          <div class="dash-stat__value">2</div>
-          <div class="dash-stat__change" style="color:var(--ink-mute);">Ava (5) & Leo (2)</div>
-        </div>
-      </div>
 
-      <!-- Upcoming & Children -->
-      <div class="dash-grid-2">
-        <div class="dash-card">
+        <!-- Stats -->
+        <div class="dash-stats">
+          <div class="dash-stat">
+            <div class="dash-stat__label">Visits This Month</div>
+            <div class="dash-stat__value">8</div>
+            <div class="dash-stat__change dash-stat__change--up">+2 from last month</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat__label">Membership</div>
+            <div class="dash-stat__value">Family</div>
+            <div class="dash-stat__change" style="color:var(--ink-mute);">Active since Mar 2026</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat__label">Guest Passes</div>
+            <div class="dash-stat__value">2</div>
+            <div class="dash-stat__change" style="color:var(--ink-mute);">Available this month</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat__label">Children</div>
+            <div class="dash-stat__value">2</div>
+            <div class="dash-stat__change" style="color:var(--ink-mute);">Ava (5) &amp; Leo (2)</div>
+          </div>
+        </div>
+
+        <!-- Upcoming & Children -->
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Upcoming Bookings</h3>
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;" onclick="document.querySelector('[data-target=\'sec-bookings\']').click()">View all &rarr;</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.85rem;">
+              <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:12px;">
+                <div style="width:48px;height:48px;background:var(--marigold-soft);border-radius:12px;display:grid;place-items:center;flex-shrink:0;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--marigold)" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div style="flex:1;"><strong style="font-size:0.92rem;">Open Play Session</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Aug 20 · 11:30 AM – 1:30 PM · Ava &amp; Leo</span></div>
+                <span class="dash-badge dash-badge--green">Confirmed</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:12px;">
+                <div style="width:48px;height:48px;background:var(--sky-soft);border-radius:12px;display:grid;place-items:center;flex-shrink:0;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--sky)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </div>
+                <div style="flex:1;"><strong style="font-size:0.92rem;">Sensory Play Program</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Aug 22 · 9:00 AM – 9:45 AM · Leo</span></div>
+                <span class="dash-badge dash-badge--yellow">Pending</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card__header">
+              <h3>Children Profiles</h3>
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;" onclick="document.querySelector('[data-target=\'sec-children\']').click()">Manage &rarr;</button>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.85rem;">
+              <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:16px;">
+                <div style="width:44px;height:44px;background:var(--rose-soft);color:var(--rose);border-radius:50%;display:grid;place-items:center;flex-shrink:0;">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                </div>
+                <div style="flex:1;"><strong style="font-size:0.92rem;">Ava Chen</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Age 5 · The Skyfort &amp; The Meadow</span></div>
+                <span class="dash-badge dash-badge--blue">Active</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:16px;">
+                <div style="width:44px;height:44px;background:var(--sky-soft);color:var(--sky);border-radius:50%;display:grid;place-items:center;flex-shrink:0;">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                </div>
+                <div style="flex:1;"><strong style="font-size:0.92rem;">Leo Chen</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Age 2 · The Meadow &amp; The Cocoon</span></div>
+                <span class="dash-badge dash-badge--blue">Active</span>
+              </div>
+            </div>
+            <div style="margin-top:1rem;padding:0.85rem;background:var(--marigold-soft);border-radius:12px;font-size:0.82rem;color:var(--ink-soft);">
+              <strong style="color:var(--ink);">Allergy Note:</strong> Ava — mild dairy sensitivity. Leo — no known allergies.
+            </div>
+          </div>
+        </div>
+
+        <!-- Visit History -->
+        <div class="dash-card" style="margin-top:2rem;">
           <div class="dash-card__header">
-            <h3>Upcoming Bookings</h3>
-            <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">+ New</button>
+            <h3>Recent Visits</h3>
+            <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">Download Receipt</button>
           </div>
-          <div style="display:flex;flex-direction:column;gap:0.85rem;">
-            <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:6px;">
-              <div style="width:48px;height:48px;background:var(--marigold-soft);border-radius:8px;display:grid;place-items:center;flex-shrink:0;">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--marigold)" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr><th>Date</th><th>Session</th><th>Children</th><th>Duration</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Aug 16, 2026</td><td>Open Play</td><td>Ava &amp; Leo</td><td>2 hours</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
+                <tr><td>Aug 13, 2026</td><td>Sensory Play</td><td>Leo</td><td>45 min</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
+                <tr><td>Aug 10, 2026</td><td>Open Play</td><td>Ava</td><td>2 hours</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: My Bookings -->
+      <section class="dash-section" id="sec-bookings">
+        <div class="dash__header">
+          <div>
+            <h1>My Bookings &amp; Passes</h1>
+            <p>Manage your upcoming studio reservations and past family visits.</p>
+          </div>
+          <a href="../../pages/booking.html" class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1.25rem;">+ New Booking</a>
+        </div>
+
+        <div class="dash-card" style="margin-bottom:1.5rem;">
+          <h3 style="margin-bottom:1rem;">Active Passes &amp; Upcoming Visits</h3>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div style="padding:1.25rem;background:var(--bg-2);border-radius:16px;border:1px solid var(--line-soft);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+              <div>
+                <span class="dash-badge dash-badge--green" style="margin-bottom:0.4rem;display:inline-block;">Confirmed Slot</span>
+                <h4 style="font-size:1.05rem;margin-bottom:0.2rem;">Open Play &amp; Climb Adventure</h4>
+                <p style="font-size:0.88rem;color:var(--ink-mute);">Thursday, Aug 20, 2026 · 11:30 AM – 1:30 PM</p>
+                <p style="font-size:0.82rem;color:var(--ink-soft);margin-top:0.3rem;">Children: Ava Chen (5), Leo Chen (2) · 2 Adults Included</p>
               </div>
-              <div style="flex:1;"><strong style="font-size:0.92rem;">Open Play Session</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Aug 20 · 11:30 AM – 1:30 PM · Ava & Leo</span></div>
-              <span class="dash-badge dash-badge--green">Confirmed</span>
+              <div style="display:flex;gap:0.5rem;">
+                <button class="btn btn--line" style="font-size:0.8rem;padding:0.4rem 0.85rem;">Reschedule</button>
+                <button class="btn btn--line" style="font-size:0.8rem;padding:0.4rem 0.85rem;color:var(--rose);">Cancel</button>
+              </div>
             </div>
-            <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:6px;">
-              <div style="width:48px;height:48px;background:var(--sky-soft);border-radius:8px;display:grid;place-items:center;flex-shrink:0;">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--sky)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+
+            <div style="padding:1.25rem;background:var(--bg-2);border-radius:16px;border:1px solid var(--line-soft);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+              <div>
+                <span class="dash-badge dash-badge--yellow" style="margin-bottom:0.4rem;display:inline-block;">Awaiting Confirmation</span>
+                <h4 style="font-size:1.05rem;margin-bottom:0.2rem;">Baby &amp; Toddler Sensory Discovery Lab</h4>
+                <p style="font-size:0.88rem;color:var(--ink-mute);">Saturday, Aug 22, 2026 · 9:00 AM – 9:45 AM</p>
+                <p style="font-size:0.82rem;color:var(--ink-soft);margin-top:0.3rem;">Child: Leo Chen (2)</p>
               </div>
-              <div style="flex:1;"><strong style="font-size:0.92rem;">Sensory Play Program</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Aug 22 · 9:00 AM – 9:45 AM · Leo</span></div>
-              <span class="dash-badge dash-badge--yellow">Pending</span>
+              <div style="display:flex;gap:0.5rem;">
+                <button class="btn btn--line" style="font-size:0.8rem;padding:0.4rem 0.85rem;">View Details</button>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="dash-card">
-          <div class="dash-card__header">
-            <h3>Children</h3>
-            <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">+ Add</button>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:0.85rem;">
-            <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:16px;">
-              <div style="width:44px;height:44px;background:var(--rose-soft);color:var(--rose);border-radius:50%;display:grid;place-items:center;flex-shrink:0;">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
-              </div>
-              <div style="flex:1;"><strong style="font-size:0.92rem;">Ava Chen</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Age 5 · The Skyfort &amp; The Meadow</span></div>
-              <a class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.65rem;">Edit</a>
-            </div>
-            <div style="display:flex;align-items:center;gap:1rem;padding:0.85rem;background:var(--bg-2);border-radius:16px;">
-              <div style="width:44px;height:44px;background:var(--sky-soft);color:var(--sky);border-radius:50%;display:grid;place-items:center;flex-shrink:0;">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
-              </div>
-              <div style="flex:1;"><strong style="font-size:0.92rem;">Leo Chen</strong><br/><span style="font-size:0.82rem;color:var(--ink-mute);">Age 2 · The Meadow &amp; The Cocoon</span></div>
-              <a class="btn btn--line" style="font-size:0.72rem;padding:0.3rem 0.65rem;">Edit</a>
-            </div>
-          </div>
-          <div style="margin-top:1rem;padding:0.85rem;background:var(--marigold-soft);border-radius:6px;font-size:0.82rem;color:var(--ink-soft);">
-            <strong style="color:var(--ink);">Allergy Info:</strong> Ava — mild dairy sensitivity. Leo — no known allergies.
+          <h3 style="margin-bottom:1rem;">Past Visit History</h3>
+          <div style="overflow-x:auto;">
+            <table class="dash-table">
+              <thead>
+                <tr><th>Booking Reference</th><th>Date</th><th>Program</th><th>Children</th><th>Status</th><th>Receipt</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>#WW-7104</code></td><td>Aug 16, 2026</td><td>Open Play (2h)</td><td>Ava &amp; Leo</td><td><span class="dash-badge dash-badge--green">Completed</span></td><td><a href="#" style="color:var(--marigold);font-size:0.82rem;">PDF ↗</a></td></tr>
+                <tr><td><code>#WW-6982</code></td><td>Aug 13, 2026</td><td>Sensory Play Lab</td><td>Leo</td><td><span class="dash-badge dash-badge--green">Completed</span></td><td><a href="#" style="color:var(--marigold);font-size:0.82rem;">PDF ↗</a></td></tr>
+                <tr><td><code>#WW-6819</code></td><td>Aug 10, 2026</td><td>Open Play (2h)</td><td>Ava</td><td><span class="dash-badge dash-badge--green">Completed</span></td><td><a href="#" style="color:var(--marigold);font-size:0.82rem;">PDF ↗</a></td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Visit History -->
-      <div class="dash-card" style="margin-bottom:2rem;">
-        <div class="dash-card__header">
-          <h3>Recent Visits</h3>
-          <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">View all</button>
+      <!-- SECTION: My Children -->
+      <section class="dash-section" id="sec-children">
+        <div class="dash__header">
+          <div>
+            <h1>Family Profiles &amp; Children</h1>
+            <p>Keep your children's developmental stages, favorite zones, and allergy notes up to date.</p>
+          </div>
+          <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1.25rem;">+ Add Child Profile</button>
         </div>
-        <div style="overflow-x:auto;">
-          <table class="dash-table">
-            <thead>
-              <tr><th>Date</th><th>Session</th><th>Children</th><th>Duration</th><th>Status</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Aug 16, 2026</td><td>Open Play</td><td>Ava & Leo</td><td>2 hours</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
-              <tr><td>Aug 13, 2026</td><td>Sensory Play</td><td>Leo</td><td>45 min</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
-              <tr><td>Aug 10, 2026</td><td>Open Play</td><td>Ava</td><td>2 hours</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
-              <tr><td>Aug 7, 2026</td><td>Open Play</td><td>Ava & Leo</td><td>2 hours</td><td><span class="dash-badge dash-badge--green">Completed</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
 
-      <!-- Membership -->
-      <div class="dash-card">
-        <div class="dash-card__header">
-          <h3>Membership Details</h3>
-          <span class="dash-badge dash-badge--green">Active</span>
+        <div class="dash-grid-2">
+          <div class="dash-card">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
+              <div style="width:56px;height:56px;background:var(--rose-soft);color:var(--rose);border-radius:50%;display:grid;place-items:center;flex-shrink:0;">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+              </div>
+              <div>
+                <h3 style="margin-bottom:0.15rem;">Ava Chen</h3>
+                <span style="font-size:0.85rem;color:var(--ink-mute);">5 Years Old · Born July 2021</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.88rem;">
+              <div><strong>Favorite Zones:</strong> The Skyfort Climber &amp; The STEAM Makerspace</div>
+              <div><strong>Allergy / Diet:</strong> Mild dairy sensitivity (Lactose-free milk)</div>
+              <div><strong>Emergency Contact:</strong> Jamie Chen (Mom) · (555) 234-8901</div>
+            </div>
+            <div style="margin-top:1.25rem;display:flex;gap:0.5rem;">
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">Edit Profile</button>
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">Zone Badges (6)</button>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;">
+              <div style="width:56px;height:56px;background:var(--sky-soft);color:var(--sky);border-radius:50%;display:grid;place-items:center;flex-shrink:0;">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+              </div>
+              <div>
+                <h3 style="margin-bottom:0.15rem;">Leo Chen</h3>
+                <span style="font-size:0.85rem;color:var(--ink-mute);">2 Years Old · Born November 2023</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.88rem;">
+              <div><strong>Favorite Zones:</strong> The Cocoon Toddler Den &amp; Soft Foam Meadow</div>
+              <div><strong>Allergy / Diet:</strong> No known allergies</div>
+              <div><strong>Emergency Contact:</strong> Jamie Chen (Mom) · (555) 234-8901</div>
+            </div>
+            <div style="margin-top:1.25rem;display:flex;gap:0.5rem;">
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">Edit Profile</button>
+              <button class="btn btn--line" style="font-size:0.78rem;padding:0.4rem 0.85rem;">Zone Badges (3)</button>
+            </div>
+          </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;">
+      </section>
+
+      <!-- SECTION: Membership -->
+      <section class="dash-section" id="sec-membership">
+        <div class="dash__header">
           <div>
-            <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-mute);margin-bottom:0.3rem;">Plan</div>
-            <div style="font-family:var(--serif);font-size:1.3rem;font-weight:600;">Family Plan</div>
+            <h1>Family Membership &amp; Passes</h1>
+            <p>Your active subscription perks, guest passes, and billing details.</p>
           </div>
-          <div>
-            <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-mute);margin-bottom:0.3rem;">Monthly Cost</div>
-            <div style="font-family:var(--serif);font-size:1.3rem;font-weight:600;">$179</div>
+          <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1.25rem;">Upgrade Plan</button>
+        </div>
+
+        <div class="dash-card" style="max-width:800px;margin-bottom:1.5rem;background:linear-gradient(135deg, var(--bg-2) 0%, rgba(245, 175, 61, 0.12) 100%);border:1px solid var(--marigold);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem;flex-wrap:wrap;gap:1rem;">
+            <div>
+              <span class="dash-badge dash-badge--yellow" style="margin-bottom:0.4rem;display:inline-block;">Active Subscription</span>
+              <h2>Whirl &amp; Wonder Family All-Access</h2>
+              <p style="color:var(--ink-soft);font-size:0.9rem;">$179.00 / month · Auto-renews on Sep 1, 2026</p>
+            </div>
+            <div style="text-align:right;">
+              <strong style="font-size:1.4rem;color:var(--marigold);">$179</strong><span style="font-size:0.85rem;color:var(--ink-mute);"> / mo</span>
+            </div>
           </div>
-          <div>
-            <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--ink-mute);margin-bottom:0.3rem;">Next Billing</div>
-            <div style="font-family:var(--serif);font-size:1.3rem;font-weight:600;">Sep 1, 2026</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+            <div style="padding:0.85rem;background:var(--bg);border-radius:12px;">
+              <strong style="display:block;font-size:0.9rem;margin-bottom:0.2rem;">✨ Unlimited Open Play</strong>
+              <span style="font-size:0.8rem;color:var(--ink-mute);">Valid 6 days a week with priority booking</span>
+            </div>
+            <div style="padding:0.85rem;background:var(--bg);border-radius:12px;">
+              <strong style="display:block;font-size:0.9rem;margin-bottom:0.2rem;">🎟️ 2 Monthly Guest Passes</strong>
+              <span style="font-size:0.8rem;color:var(--ink-mute);">2 passes remaining for August</span>
+            </div>
+            <div style="padding:0.85rem;background:var(--bg);border-radius:12px;">
+              <strong style="display:block;font-size:0.9rem;margin-bottom:0.2rem;">🎂 15% Party Discount</strong>
+              <span style="font-size:0.8rem;color:var(--ink-mute);">Applies automatically at checkout</span>
+            </div>
+            <div style="padding:0.85rem;background:var(--bg);border-radius:12px;">
+              <strong style="display:block;font-size:0.9rem;margin-bottom:0.2rem;">☕ Parent Lounge Access</strong>
+              <span style="font-size:0.8rem;color:var(--ink-mute);">Complimentary organic espresso bar</span>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <button class="btn btn--line" style="font-size:0.82rem;padding:0.5rem 1rem;">Pause Membership</button>
+            <button class="btn btn--line" style="font-size:0.82rem;padding:0.5rem 1rem;">Update Payment Method</button>
+            <button class="btn btn--line" style="font-size:0.82rem;padding:0.5rem 1rem;color:var(--rose);">Cancel Renewal</button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- SECTION: Profile -->
+      <section class="dash-section" id="sec-profile">
+        <div class="dash__header">
+          <div>
+            <h1>Parent Profile &amp; Contact Info</h1>
+            <p>Manage your family account details and notification preferences.</p>
+          </div>
+          <button class="btn btn--solid" style="font-size:0.82rem;padding:0.55rem 1.25rem;">Save Profile</button>
+        </div>
+
+        <div class="dash-card" style="max-width:800px;">
+          <form onsubmit="event.preventDefault(); alert('Profile updated successfully!');">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem;">
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Parent Full Name</label>
+                <input type="text" value="Jamie Chen" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Email Address</label>
+                <input type="email" value="jamie.c@example.com" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Mobile Phone</label>
+                <input type="tel" value="(555) 234-8901" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+              <div class="field">
+                <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem;">Home Neighborhood</label>
+                <input type="text" value="Fort Greene / Clinton Hill, Brooklyn" style="width:100%;padding:0.65rem 0.85rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);" />
+              </div>
+            </div>
+            <button type="submit" class="btn--brand-pill" style="padding:0.65rem 1.75rem;">Save Changes</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SECTION: Settings -->
+      <section class="dash-section" id="sec-settings">
+        <div class="dash__header">
+          <div>
+            <h1>Account Preferences &amp; Security</h1>
+            <p>Manage SMS alerts, booking confirmations, and password.</p>
+          </div>
+        </div>
+
+        <div class="dash-card" style="max-width:800px;">
+          <h3 style="margin-bottom:1rem;">Notification Preferences</h3>
+          <div style="display:flex;flex-direction:column;gap:0.85rem;margin-bottom:1.5rem;">
+            <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer;font-size:0.9rem;">
+              <input type="checkbox" checked style="width:18px;height:18px;accent-color:var(--marigold);" />
+              <span>SMS reminders 2 hours before booked play sessions</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer;font-size:0.9rem;">
+              <input type="checkbox" checked style="width:18px;height:18px;accent-color:var(--marigold);" />
+              <span>Monthly journal digest and special member workshop invitations</span>
+            </label>
+            <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer;font-size:0.9rem;">
+              <input type="checkbox" style="width:18px;height:18px;accent-color:var(--marigold);" />
+              <span>Weather alert studio updates (snow days / rain specials)</span>
+            </label>
+          </div>
+          <button class="btn--brand-pill" style="padding:0.65rem 1.75rem;">Save Preferences</button>
+        </div>
+      </section>
+
     </main>
   </div>
 
@@ -195,7 +402,9 @@
   <script src="../../../src/js/dashboard.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', function(){
+    Dashboard.initDashboardCharts();
     Dashboard.initDashNav();
+    Dashboard.initSectionNavigation();
   });
   </script>
 </body>

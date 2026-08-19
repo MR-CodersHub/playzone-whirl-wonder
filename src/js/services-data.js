@@ -63,7 +63,7 @@ var SERVICES_DATA = [
     title: 'Monthly Memberships',
     short: 'Unlimited open play, priority booking, guest passes, and party discounts.',
     icon: '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
-    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80',
+    image: '../../assets/reception.jpg',
     description: 'A home key for our regulars. Our monthly memberships include unlimited open play, 15% off party add-ons, guest passes each month, and early booking on weekends. Pause anytime. No contracts, no commitments.',
     features: [
       'Unlimited open play sessions',

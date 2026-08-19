@@ -39,4 +39,25 @@
       }, 1200);
     }, 600);
   });
+
+  // Password toggle
+  document.querySelectorAll('.password-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var wrap = btn.closest('.input-password-wrap');
+      if (!wrap) return;
+      var input = wrap.querySelector('input');
+      if (!input) return;
+      var eye = btn.querySelector('.icon-eye');
+      var eyeOff = btn.querySelector('.icon-eye-off');
+      if (input.type === 'password') {
+        input.type = 'text';
+        if (eye) eye.style.display = 'none';
+        if (eyeOff) eyeOff.style.display = 'block';
+      } else {
+        input.type = 'password';
+        if (eye) eye.style.display = 'block';
+        if (eyeOff) eyeOff.style.display = 'none';
+      }
+    });
+  });
 })();
