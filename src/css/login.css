@@ -79,6 +79,17 @@
 @media (max-width: 900px) {
   .login__panel { padding: 1.5rem 1.25rem 3rem; }
 }
+@media (max-width: 480px) {
+  .login__panel { padding: 1rem 1rem 2.5rem; }
+  .login__panel-inner { padding: 0; }
+  .login__head h2 { font-size: 1.4rem; }
+  .login__form { gap: 0.7rem; }
+  .login__form .field input { padding: 0.55rem 0.75rem; font-size: 0.85rem; }
+  .social-auth-grid { gap: 0.5rem; }
+  .btn-social { padding: 0.55rem 0.75rem; font-size: 0.82rem; }
+  .login__demo { padding: 0.9rem 1rem; font-size: 0.82rem; }
+  .login__success { padding: 0.75rem 1rem; font-size: 0.85rem; }
+}
 .login__panel-inner {
   width: 100%;
   max-width: 440px;
