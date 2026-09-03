@@ -92,6 +92,9 @@
     '<a href="' + base + 'public/auth/login.html" class="nav__mobile-login">' +
     '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>' +
     'Login / Signup</a>' +
+    '<div class="nav__mobile-tools" style="display:flex;gap:0.65rem;margin-top:0.25rem;">' +
+    
+    '</div>' +
     '</div>' +
     '</div>' +
     '</header>';
@@ -107,8 +110,6 @@
   var nav = document.getElementById('nav');
   var profileBtn = document.getElementById('profileToggle');
   var dropdown = document.getElementById('profileDropdown');
-  var themeToggle = document.getElementById('themeToggle');
-  var rtlToggle = document.getElementById('rtlToggle');
 
   // Scroll state
   function updateNav() {
@@ -188,12 +189,10 @@
     applyTheme(true);
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
-      var isDark = document.documentElement.classList.contains('dark');
-      applyTheme(!isDark);
-      localStorage.setItem('ww-theme', !isDark ? 'dark' : 'light');
-    });
+  function toggleTheme() {
+    var isDark = document.documentElement.classList.contains('dark');
+    applyTheme(!isDark);
+    localStorage.setItem('ww-theme', !isDark ? 'dark' : 'light');
   }
 
   // RTL toggle
@@ -201,22 +200,43 @@
   if (savedRtl) {
     document.documentElement.setAttribute('dir', 'rtl');
     document.documentElement.classList.add('rtl');
-  }
-
-  if (rtlToggle) {
-    rtlToggle.addEventListener('click', function () {
-      var isRtl = document.documentElement.getAttribute('dir') === 'rtl';
-      if (isRtl) {
-        document.documentElement.removeAttribute('dir');
-        document.documentElement.classList.remove('rtl');
-        localStorage.setItem('ww-rtl', 'false');
-      } else {
-        document.documentElement.setAttribute('dir', 'rtl');
-        document.documentElement.classList.add('rtl');
-        localStorage.setItem('ww-rtl', 'true');
-      }
+    document.querySelectorAll('.nav__rtl-toggle').forEach(function (btn) {
+      btn.classList.add('is-active');
     });
   }
+
+  function toggleRtl() {
+    var isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+    if (isRtl) {
+      document.documentElement.removeAttribute('dir');
+      document.documentElement.classList.remove('rtl');
+      localStorage.setItem('ww-rtl', 'false');
+    } else {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.classList.add('rtl');
+      localStorage.setItem('ww-rtl', 'true');
+    }
+    document.querySelectorAll('.nav__rtl-toggle').forEach(function (btn) {
+      btn.classList.toggle('is-active', !isRtl);
+    });
+  }
+
+  // Delegated click handler for theme and RTL toggles
+  document.addEventListener('click', function (e) {
+    var themeBtn = e.target.closest('.nav__theme-toggle');
+    if (themeBtn) {
+      e.preventDefault();
+      toggleTheme();
+      return;
+    }
+
+    var rtlBtn = e.target.closest('.nav__rtl-toggle');
+    if (rtlBtn) {
+      e.preventDefault();
+      toggleRtl();
+      return;
+    }
+  });
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {

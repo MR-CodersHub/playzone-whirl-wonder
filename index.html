@@ -19,7 +19,7 @@
   <section class="hero" id="hero" style="min-height: 100vh;">
     <div class="hero__bg">
       <img
-        src="./assets/hero-bg.png"
+        src="./assets/hero-bg.jpg"
         alt="Whirl & Wonder Indoor Play Studio"
         class="hero__bg-img"
       />
@@ -252,29 +252,30 @@
 
   <!-- Safety -->
   <section class="safety" id="safety">
-    <div class="container safety__grid">
-      <div class="safety__intro">
+    <div class="container">
+      <header class="section__head">
         <span class="eyebrow" style="color:var(--sky);">03 — Safety</span>
-        <h2 class="section__title">The <span class="text-grass">safety details,</span><br /><span class="text-marigold">taken seriously.</span></h2>
+        <h2 class="section__title">The <span class="text-grass">safety details,</span> <span class="text-marigold">taken seriously.</span></h2>
         <p class="section__lede">
           The fun only works if the trust does. Here's exactly how we keep kids
           safe, what we clean, who watches the room, and how we handle
           allergies, illness, and emergencies.
         </p>
-        <div class="safety__seal glass">
-          <div class="seal__row">
-            <span class="seal__dot"></span>
-            <div>
-              <strong>Inspected quarterly</strong>
-              <span>ASTM F1918 indoor play equipment standard</span>
-            </div>
+      </header>
+
+      <div class="safety__seal-bar glass">
+        <div class="seal__row">
+          <span class="seal__dot"></span>
+          <div>
+            <strong>Inspected quarterly</strong>
+            <span>ASTM F1918 indoor play equipment standard</span>
           </div>
-          <div class="seal__row">
-            <span class="seal__dot"></span>
-            <div>
-              <strong>CPR &amp; first-aid certified</strong>
-              <span>Every host, every shift</span>
-            </div>
+        </div>
+        <div class="seal__row">
+          <span class="seal__dot"></span>
+          <div>
+            <strong>CPR &amp; first-aid certified</strong>
+            <span>Every host, every shift</span>
           </div>
         </div>
       </div>
@@ -401,66 +402,71 @@
 
   <!-- Reserve -->
   <section class="reserve" id="reserve">
-    <div class="container reserve__inner glass">
-      <div class="reserve__intro">
+    <div class="container">
+      <header class="section__head">
         <span class="eyebrow" style="color:var(--grass);">06 — Reserve</span>
         <h2 class="section__title">Pick a slot. <span class="text-grass">Bring small socks.</span></h2>
         <p class="section__lede">
           Open play is $14 per child, free under 12 months. Members always
           have priority booking up to 14 days out.
         </p>
-        <ul class="reserve__bullets">
-          <li>Same-day reservations close 1 hour before slot start</li>
-          <li>Free cancellation up to 4 hours in advance</li>
-          <li>2 adults included per child — no extra charge</li>
-        </ul>
-      </div>
+      </header>
 
-      <form class="reserve__form" id="reserveForm">
-        <div class="field">
-          <label for="r-name">Parent name</label>
-          <input id="r-name" name="name" type="text" required placeholder="Jamie Chen" />
-        </div>
-        <div class="field">
-          <label for="r-email">Email</label>
-          <input id="r-email" name="email" type="email" required placeholder="jamie@home.com" />
-        </div>
-        <div class="field">
-          <label for="r-date">Date</label>
-          <input id="r-date" name="date" type="date" required />
-        </div>
-        <div class="field">
-          <label for="r-time">Time</label>
-          <select id="r-time" name="time" required>
-            <option value="">Choose a slot</option>
-            <option>9:00 AM – 11:00 AM · Toddler hour</option>
-            <option>11:30 AM – 1:30 PM</option>
-            <option>2:00 PM – 4:00 PM</option>
-            <option>4:30 PM – 6:30 PM</option>
-            <option>6:30 PM – 7:30 PM · Wind-down</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="r-kids">Children (by age)</label>
-          <input id="r-kids" name="kids" type="text" required placeholder="e.g. 1× age 3, 1× age 6" />
-        </div>
-        <div class="field field--full">
-          <label for="r-notes">Notes (allergies, accessibility)</label>
-          <textarea id="r-notes" name="notes" rows="3" placeholder="Optional. We'll be in touch if anything needs a call."></textarea>
-        </div>
-      </form>
+      <div class="reserve__inner glass">
+
+        <form class="reserve__form" id="reserveForm">
+          <div class="field">
+            <label for="r-name">Parent name</label>
+            <input id="r-name" name="name" type="text" required placeholder="Jamie Chen" />
+          </div>
+          <div class="field">
+            <label for="r-email">Email</label>
+            <input id="r-email" name="email" type="email" required placeholder="jamie@home.com" />
+          </div>
+          <div class="field">
+            <label for="r-date">Date</label>
+            <input id="r-date" name="date" type="date" required />
+          </div>
+          <div class="field">
+            <label for="r-time">Time</label>
+            <select id="r-time" name="time" required>
+              <option value="">Choose a slot</option>
+              <option>9:00 AM – 11:00 AM · Toddler hour</option>
+              <option>11:30 AM – 1:30 PM</option>
+              <option>2:00 PM – 4:00 PM</option>
+              <option>4:30 PM – 6:30 PM</option>
+              <option>6:30 PM – 7:30 PM · Wind-down</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="r-kids">Children (by age)</label>
+            <input id="r-kids" name="kids" type="text" required placeholder="e.g. 1× age 3, 1× age 6" />
+          </div>
+          <div class="field field--full">
+            <label for="r-notes">Notes (allergies, accessibility)</label>
+            <textarea id="r-notes" name="notes" rows="3" placeholder="Optional. We'll be in touch if anything needs a call."></textarea>
+          </div>
+          <div class="field field--full field--submit">
+            <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;">Reserve slot</button>
+          </div>
+          
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- Membership strip -->
   <section class="membership">
-    <div class="container membership__inner">
-      <div class="membership__copy">
+    <div class="container">
+      <header class="section__head">
         <span class="eyebrow" style="color:var(--marigold);">07 — Membership</span>
-        <h3 class="section__title section__title--sm">A <span class="text-marigold">home key</span> for our regulars.</h3>
-        <p>Unlimited open play, 15% off party add-ons, guest passes each month,
-          and early booking on weekends. Pause anytime.</p>
-      </div>
+        <h2 class="section__title" style="color:var(--bg);">A <span class="text-marigold">home key</span> for our regulars.</h2>
+        <p class="section__lede" style="color:rgba(255,252,246,0.85);">
+          Unlimited open play, 15% off party add-ons, guest passes each month,
+          and early booking on weekends. Pause anytime.
+        </p>
+      </header>
+
       <div class="membership__tiers">
         <div class="tier">
           <span class="tier__name">Siblings</span>
@@ -478,7 +484,8 @@
           <span class="tier__note">Caregiver-only pass, all households</span>
         </div>
       </div>
-      <div class="membership__cta">
+
+      <div class="membership__cta" style="text-align:center;margin-top:2.5rem;">
         <a href="public/auth/login.html" class="btn--brand-pill" id="memberBtn">Start membership</a>
       </div>
     </div>
